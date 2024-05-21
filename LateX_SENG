@@ -31,7 +31,7 @@
 \section{Benutzeroberfläche}
 \begin{itemize}
     \item 1.Wir benötigen Main Screen mit Elementen(log in oder lokal)
-    \item 2.Liste mit allen Tieren mit Element(Pop-Up für Tiere, Neues Tier und Daten exportieren)
+    \item 2.Liste mit allen Tieren mit Element(Pop-Up für Tiere, Neues Tier und Daten exportieren, Warnhinweise für Tiere mit Anzeichen für Parasitenbefall)
     \item 2.1 Pop-Up Tiere, Daten des Tiers(Gewicht, Medizinische Versorgung, Nahrungsmittel, Nummer, Bilder, Foto machen für Gewichtsaktualisierung, Tier entfernen)
     \item 2.2 Neues Tier anlegen mit Nummer, Bild, Gewicht evtl. Notizen, Import aus JSON
     \item 2.3 Daten exportieren, Alle oder einzelne Tiere auswählen(JSON/PDF)
