@@ -1,1 +1,47 @@
+\documentclass{article}
+\usepackage{titlesec}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
+\title{SENG Spezifikation goatWeight}
+\author{Colonel Sanders}
+\date{ }
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Einführung}
+\subsection{Einsatzbereich}
+\subsection{Fachbegriffe und Abkürzungen}
+\section{Beschreibung}
+\subsection{Grundlegende Funktionen}
+\subsection{Benutzerprofile}
+\subsection{Einbettung}
+\subsection{Einschränkungen}
+\section{Anforderungen}
+\subsection{Leistungsanforderungen}
+\subsection{Mengengerüst}
+\subsection{Funktionale Anforderungen}
+\section{Benutzeroberfläche}
+\begin{itemize}
+    \item 1.Wir benötigen Main Screen mit Elementen(log in oder lokal)
+    \item 2.Liste mit allen Tieren mit Element(Pop-Up für Tiere, Neues Tier und Daten exportieren)
+    \item 2.1 Pop-Up Tiere, Daten des Tiers(Gewicht, Medizinische Versorgung, Nahrungsmittel, Nummer, Bilder, Foto machen für Gewichtsaktualisierung, Tier entfernen)
+    \item 2.2 Neues Tier anlegen mit Nummer, Bild, Gewicht evtl. Notizen, Import aus JSON
+    \item 2.3 Daten exportieren, Alle oder einzelne Tiere auswählen(JSON/PDF)
+\end{itemize}
+
+\section{Anwendungsfälle}
+\subsection{Use-Case-Diagramm}
+Beschreibungen der einzelnen Funktion 
+\section{Anhang}
+\subsection{Begriffslexikon}
+\subsection{}
+
+\end{document}
