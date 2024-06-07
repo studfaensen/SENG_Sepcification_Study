@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{titlesec}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 \setcounter{secnumdepth}{4}
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
@@ -39,7 +40,264 @@
 
 \section{Anwendungsfälle}
 \subsection{Use-Case-Diagramm}
-Beschreibungen der einzelnen Funktion 
+
+\begin{center}
+    \includegraphics{UseCase.png}
+\end{center}
+
+\subsection{Use-Case-Beschreibungen}
+\begin{table}[]
+\begin{tabular}{|l||l|l|}
+\hline
+Name          &           & Nutzer hinzufügen \\ \hline
+Vorbedingung  &           & Datenbankverbindung vorhanden \\ \hline
+Normal Ablauf & N1        &  \\ \hline
+              & N2        &  \\ \hline
+              & N3        &  \\ \hline
+              & N4        &  \\ \hline
+              & N5        &  \\ \hline
+Nachbedingung &           &  \\ \hline
+Alt.          & Interrupt &  \\ \hline
+Fehler        & F1        &  \\ \hline
+              & F2        &  \\ \hline
+              & F3        &  \\ \hline
+              & F4        &  \\ \hline
+Referenzen    &           &  \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}[]
+\begin{tabular}{|l||l|l|}
+\hline
+Name          &           & Datenbank verbinden \\ \hline
+Vorbedingung  &           &  \\ \hline
+Normal Ablauf & N1        &  \\ \hline
+              & N2        &  \\ \hline
+              & N3        &  \\ \hline
+              & N4        &  \\ \hline
+              & N5        &  \\ \hline
+Nachbedingung &           &  \\ \hline
+Alt.          & Interrupt &  \\ \hline
+Fehler        & F1        &  \\ \hline
+              & F2        &  \\ \hline
+              & F3        &  \\ \hline
+              & F4        &  \\ \hline
+Referenzen    &           &  \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}[]
+\begin{tabular}{|l||l|l|}
+\hline
+Name          &           & Neues Tier hinzufügen \\ \hline
+Vorbedingung  &           & Datenbankverbindung vorhanden \\ \hline
+Normal Ablauf & N1        &  \\ \hline
+              & N2        &  \\ \hline
+              & N3        &  \\ \hline
+              & N4        &  \\ \hline
+              & N5        &  \\ \hline
+Nachbedingung &           &  \\ \hline
+Alt.          & Interrupt &  \\ \hline
+Fehler        & F1        &  \\ \hline
+              & F2        &  \\ \hline
+              & F3        &  \\ \hline
+              & F4        &  \\ \hline
+Referenzen    &           &  \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}[]
+\begin{tabular}{|l||l|l|}
+\hline
+Name          &           & Neues Tier importieren \\ \hline
+Vorbedingung  &           & Datenbankverbindung vorhanden, Tierdatei existiert \\ \hline
+Normal Ablauf & N1        &  \\ \hline
+              & N2        &  \\ \hline
+              & N3        &  \\ \hline
+              & N4        &  \\ \hline
+              & N5        &  \\ \hline
+Nachbedingung &           &  \\ \hline
+Alt.          & Interrupt &  \\ \hline
+Fehler        & F1        &  \\ \hline
+              & F2        &  \\ \hline
+              & F3        &  \\ \hline
+              & F4        &  \\ \hline
+Referenzen    &           &  \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}[]
+\begin{tabular}{|l||l|l|}
+\hline
+Name          &           & Log-In \\ \hline
+Vorbedingung  &           &  \\ \hline
+Normal Ablauf & N1        &  \\ \hline
+              & N2        &  \\ \hline
+              & N3        &  \\ \hline
+              & N4        &  \\ \hline
+              & N5        &  \\ \hline
+Nachbedingung &           &  \\ \hline
+Alt.          & Interrupt &  \\ \hline
+Fehler        & F1        &  \\ \hline
+              & F2        &  \\ \hline
+              & F3        &  \\ \hline
+              & F4        &  \\ \hline
+Referenzen    &           &  \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}[]
+\begin{tabular}{|l||l|l|}
+\hline
+Name          &           & Datenbank impotieren \\ \hline
+Vorbedingung  &           &  \\ \hline
+Normal Ablauf & N1        &  \\ \hline
+              & N2        &  \\ \hline
+              & N3        &  \\ \hline
+              & N4        &  \\ \hline
+              & N5        &  \\ \hline
+Nachbedingung &           &  \\ \hline
+Alt.          & Interrupt &  \\ \hline
+Fehler        & F1        &  \\ \hline
+              & F2        &  \\ \hline
+              & F3        &  \\ \hline
+              & F4        &  \\ \hline
+Referenzen    &           &  \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+
+\begin{table}[]
+\begin{tabular}{|l||l|l|}
+\hline
+Name          &           & In Datenbank anmelden \\ \hline
+Vorbedingung  &           &  \\ \hline
+Normal Ablauf & N1        &  \\ \hline
+              & N2        &  \\ \hline
+              & N3        &  \\ \hline
+              & N4        &  \\ \hline
+              & N5        &  \\ \hline
+Nachbedingung &           &  \\ \hline
+Alt.          & Interrupt &  \\ \hline
+Fehler        & F1        &  \\ \hline
+              & F2        &  \\ \hline
+              & F3        &  \\ \hline
+              & F4        &  \\ \hline
+Referenzen    &           &  \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}[]
+\begin{tabular}{|l||l|l|}
+\hline
+Name          &           & Photo machen \\ \hline
+Vorbedingung  &           &  \\ \hline
+Normal Ablauf & N1        &  \\ \hline
+              & N2        &  \\ \hline
+              & N3        &  \\ \hline
+              & N4        &  \\ \hline
+              & N5        &  \\ \hline
+Nachbedingung &           &  \\ \hline
+Alt.          & Interrupt &  \\ \hline
+Fehler        & F1        &  \\ \hline
+              & F2        &  \\ \hline
+              & F3        &  \\ \hline
+              & F4        &  \\ \hline
+Referenzen    &           &  \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}[]
+\begin{tabular}{|l||l|l|}
+\hline
+Name          &           & Dateien anzeigen \\ \hline
+Vorbedingung  &           &  \\ \hline
+Normal Ablauf & N1        &  \\ \hline
+              & N2        &  \\ \hline
+              & N3        &  \\ \hline
+              & N4        &  \\ \hline
+              & N5        &  \\ \hline
+Nachbedingung &           &  \\ \hline
+Alt.          & Interrupt &  \\ \hline
+Fehler        & F1        &  \\ \hline
+              & F2        &  \\ \hline
+              & F3        &  \\ \hline
+              & F4        &  \\ \hline
+Referenzen    &           &  \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}[]
+\begin{tabular}{|l||l|l|}
+\hline
+Name          &           & Tiere exportieren \\ \hline
+Vorbedingung  &           &  \\ \hline
+Normal Ablauf & N1        &  \\ \hline
+              & N2        &  \\ \hline
+              & N3        &  \\ \hline
+              & N4        &  \\ \hline
+              & N5        &  \\ \hline
+Nachbedingung &           &  \\ \hline
+Alt.          & Interrupt &  \\ \hline
+Fehler        & F1        &  \\ \hline
+              & F2        &  \\ \hline
+              & F3        &  \\ \hline
+              & F4        &  \\ \hline
+Referenzen    &           &  \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}[]
+\begin{tabular}{|l||l|l|}
+\hline
+Name          &           & In JSON exportieren \\ \hline
+Vorbedingung  &           &  \\ \hline
+Normal Ablauf & N1        &  \\ \hline
+              & N2        &  \\ \hline
+              & N3        &  \\ \hline
+              & N4        &  \\ \hline
+              & N5        &  \\ \hline
+Nachbedingung &           &  \\ \hline
+Alt.          & Interrupt &  \\ \hline
+Fehler        & F1        &  \\ \hline
+              & F2        &  \\ \hline
+              & F3        &  \\ \hline
+              & F4        &  \\ \hline
+Referenzen    &           &  \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}[]
+\begin{tabular}{|l||l|l|}
+\hline
+Name          &           & In PDF exportieren \\ \hline
+Vorbedingung  &           &  \\ \hline
+Normal Ablauf & N1        &  \\ \hline
+              & N2        &  \\ \hline
+              & N3        &  \\ \hline
+              & N4        &  \\ \hline
+              & N5        &  \\ \hline
+Nachbedingung &           &  \\ \hline
+Alt.          & Interrupt &  \\ \hline
+Fehler        & F1        &  \\ \hline
+              & F2        &  \\ \hline
+              & F3        &  \\ \hline
+              & F4        &  \\ \hline
+Referenzen    &           &  \\ \hline
+\end{tabular}
+\end{table}
+\clearpage
 \section{Anhang}
 \subsection{Begriffslexikon}
 \subsection{}
