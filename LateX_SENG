@@ -51,148 +51,61 @@
 \hline
 Name          &           & Nutzer hinzufügen \\ \hline
 Vorbedingung  &           & Datenbankverbindung vorhanden \\ \hline
-Normal Ablauf & N1        &  \\ \hline
-              & N2        &  \\ \hline
-              & N3        &  \\ \hline
-              & N4        &  \\ \hline
-              & N5        &  \\ \hline
-Nachbedingung &           &  \\ \hline
-Alt.          & Interrupt &  \\ \hline
-Fehler        & F1        &  \\ \hline
-              & F2        &  \\ \hline
-              & F3        &  \\ \hline
-              & F4        &  \\ \hline
+Normal Ablauf & N1        & Nutzername eingeben \rightarrow F1 \\ \hline
+              & N2        & Passwort erstellen \rightarrow F2 \\ \hline
+              & N3        & Passwort wiederholen \rightarrow F2  \\ \hline
+Nachbedingung &           & Nutzer erstellt \\ \hline
+Fehler        & F1        & Nutzer exisitiert bereits \rightarrow Weiterleitung zur Anmeldung \\ \hline
+              & F2        & Passwort nicht nach vorgaben \rightarrow N2 \\ \hline
 Referenzen    &           &  \\ \hline
 \end{tabular}
 \end{table}
-\clearpage
 
 \begin{table}[]
 \begin{tabular}{|l||l|l|}
 \hline
 Name          &           & Datenbank verbinden \\ \hline
 Vorbedingung  &           &  \\ \hline
-Normal Ablauf & N1        &  \\ \hline
-              & N2        &  \\ \hline
-              & N3        &  \\ \hline
-              & N4        &  \\ \hline
-              & N5        &  \\ \hline
-Nachbedingung &           &  \\ \hline
-Alt.          & Interrupt &  \\ \hline
-Fehler        & F1        &  \\ \hline
-              & F2        &  \\ \hline
-              & F3        &  \\ \hline
-              & F4        &  \\ \hline
+Normal Ablauf & N1        & IP-Addresse eingeben \rightarrow F1 \\ \hline
+Alt           & A1        & Lokale Datenbankdatei einlesen \rightarrow F2 \\ \hline
+              & N2        & Nutzername eingeben \rightarrow F3 \\ \hline
+              & N3        & Passwort eingeben \rightarrow F4 \\ \hline
+Nachbedingung &           & Datenbankverbingung erstellt \\ \hline
+Fehler        & F1        & IP-Addresse fehlherhaft \rightarrow N1 \\ \hline
+              & F2        & Datei kann nicht geöffnet werden \rightarrow N1 \\ \hline
+              & F3        & Nutzer exisitert nicht \rightarrow N1 \\ \hline
+              & F4        & Passwort falsch \rightarrow N1 \\ \hline
 Referenzen    &           &  \\ \hline
 \end{tabular}
 \end{table}
-\clearpage
 
 \begin{table}[]
 \begin{tabular}{|l||l|l|}
 \hline
 Name          &           & Neues Tier hinzufügen \\ \hline
 Vorbedingung  &           & Datenbankverbindung vorhanden \\ \hline
-Normal Ablauf & N1        &  \\ \hline
-              & N2        &  \\ \hline
-              & N3        &  \\ \hline
-              & N4        &  \\ \hline
-              & N5        &  \\ \hline
-Nachbedingung &           &  \\ \hline
-Alt.          & Interrupt &  \\ \hline
-Fehler        & F1        &  \\ \hline
-              & F2        &  \\ \hline
-              & F3        &  \\ \hline
-              & F4        &  \\ \hline
+Normal Ablauf & N1        & Datenbankverbindung prüfen \rightarrow F1 \\ \hline
+              & N2        & Daten zum Tier hinzufügen \\ \hline
+Alt.          & A2        & Tierdatei importieren \\ \hline
+              & N3        & Daten in Datenbank speichern \rightarrow F1 \\ \hline
+Nachbedingung &           & Tier wurde hinzugefügt \\ \hline
+Fehler        & F1        & Datenbankverbindung verloren \rightarrow N1 \\ \hline
 Referenzen    &           &  \\ \hline
 \end{tabular}
 \end{table}
-\clearpage
-
-\begin{table}[]
-\begin{tabular}{|l||l|l|}
-\hline
-Name          &           & Neues Tier importieren \\ \hline
-Vorbedingung  &           & Datenbankverbindung vorhanden, Tierdatei existiert \\ \hline
-Normal Ablauf & N1        &  \\ \hline
-              & N2        &  \\ \hline
-              & N3        &  \\ \hline
-              & N4        &  \\ \hline
-              & N5        &  \\ \hline
-Nachbedingung &           &  \\ \hline
-Alt.          & Interrupt &  \\ \hline
-Fehler        & F1        &  \\ \hline
-              & F2        &  \\ \hline
-              & F3        &  \\ \hline
-              & F4        &  \\ \hline
-Referenzen    &           &  \\ \hline
-\end{tabular}
-\end{table}
-\clearpage
 
 \begin{table}[]
 \begin{tabular}{|l||l|l|}
 \hline
 Name          &           & Log-In \\ \hline
-Vorbedingung  &           &  \\ \hline
-Normal Ablauf & N1        &  \\ \hline
-              & N2        &  \\ \hline
-              & N3        &  \\ \hline
-              & N4        &  \\ \hline
-              & N5        &  \\ \hline
-Nachbedingung &           &  \\ \hline
-Alt.          & Interrupt &  \\ \hline
-Fehler        & F1        &  \\ \hline
-              & F2        &  \\ \hline
-              & F3        &  \\ \hline
-              & F4        &  \\ \hline
+Vorbedingung  &           & Datenbankverbindung vorhanden \\ \hline
+Normal Ablauf & N1        & Nutzername eingeben \rightarrow F1 \\ \hline
+              & N2        & Passwort eingeben \rightarrow F1 \\ \hline
+Nachbedingung &           & Angemeldet \\ \hline
+Fehler        & F1        & Anmeldung nicht möglich \rightarrow N1 \\ \hline
 Referenzen    &           &  \\ \hline
 \end{tabular}
 \end{table}
-\clearpage
-
-\begin{table}[]
-\begin{tabular}{|l||l|l|}
-\hline
-Name          &           & Datenbank impotieren \\ \hline
-Vorbedingung  &           &  \\ \hline
-Normal Ablauf & N1        &  \\ \hline
-              & N2        &  \\ \hline
-              & N3        &  \\ \hline
-              & N4        &  \\ \hline
-              & N5        &  \\ \hline
-Nachbedingung &           &  \\ \hline
-Alt.          & Interrupt &  \\ \hline
-Fehler        & F1        &  \\ \hline
-              & F2        &  \\ \hline
-              & F3        &  \\ \hline
-              & F4        &  \\ \hline
-Referenzen    &           &  \\ \hline
-\end{tabular}
-\end{table}
-\clearpage
-
-
-\begin{table}[]
-\begin{tabular}{|l||l|l|}
-\hline
-Name          &           & In Datenbank anmelden \\ \hline
-Vorbedingung  &           &  \\ \hline
-Normal Ablauf & N1        &  \\ \hline
-              & N2        &  \\ \hline
-              & N3        &  \\ \hline
-              & N4        &  \\ \hline
-              & N5        &  \\ \hline
-Nachbedingung &           &  \\ \hline
-Alt.          & Interrupt &  \\ \hline
-Fehler        & F1        &  \\ \hline
-              & F2        &  \\ \hline
-              & F3        &  \\ \hline
-              & F4        &  \\ \hline
-Referenzen    &           &  \\ \hline
-\end{tabular}
-\end{table}
-\clearpage
 
 \begin{table}[]
 \begin{tabular}{|l||l|l|}
@@ -213,7 +126,6 @@ Fehler        & F1        &  \\ \hline
 Referenzen    &           &  \\ \hline
 \end{tabular}
 \end{table}
-\clearpage
 
 \begin{table}[]
 \begin{tabular}{|l||l|l|}
@@ -234,7 +146,6 @@ Fehler        & F1        &  \\ \hline
 Referenzen    &           &  \\ \hline
 \end{tabular}
 \end{table}
-\clearpage
 
 \begin{table}[]
 \begin{tabular}{|l||l|l|}
@@ -247,7 +158,7 @@ Normal Ablauf & N1        &  \\ \hline
               & N4        &  \\ \hline
               & N5        &  \\ \hline
 Nachbedingung &           &  \\ \hline
-Alt.          & Interrupt &  \\ \hline
+Alt.          & A1        & JSON / PDF wählen \\ \hline
 Fehler        & F1        &  \\ \hline
               & F2        &  \\ \hline
               & F3        &  \\ \hline
@@ -255,49 +166,7 @@ Fehler        & F1        &  \\ \hline
 Referenzen    &           &  \\ \hline
 \end{tabular}
 \end{table}
-\clearpage
 
-\begin{table}[]
-\begin{tabular}{|l||l|l|}
-\hline
-Name          &           & In JSON exportieren \\ \hline
-Vorbedingung  &           &  \\ \hline
-Normal Ablauf & N1        &  \\ \hline
-              & N2        &  \\ \hline
-              & N3        &  \\ \hline
-              & N4        &  \\ \hline
-              & N5        &  \\ \hline
-Nachbedingung &           &  \\ \hline
-Alt.          & Interrupt &  \\ \hline
-Fehler        & F1        &  \\ \hline
-              & F2        &  \\ \hline
-              & F3        &  \\ \hline
-              & F4        &  \\ \hline
-Referenzen    &           &  \\ \hline
-\end{tabular}
-\end{table}
-\clearpage
-
-\begin{table}[]
-\begin{tabular}{|l||l|l|}
-\hline
-Name          &           & In PDF exportieren \\ \hline
-Vorbedingung  &           &  \\ \hline
-Normal Ablauf & N1        &  \\ \hline
-              & N2        &  \\ \hline
-              & N3        &  \\ \hline
-              & N4        &  \\ \hline
-              & N5        &  \\ \hline
-Nachbedingung &           &  \\ \hline
-Alt.          & Interrupt &  \\ \hline
-Fehler        & F1        &  \\ \hline
-              & F2        &  \\ \hline
-              & F3        &  \\ \hline
-              & F4        &  \\ \hline
-Referenzen    &           &  \\ \hline
-\end{tabular}
-\end{table}
-\clearpage
 \section{Anhang}
 \subsection{Begriffslexikon}
 \subsection{}
