@@ -131,18 +131,16 @@ Referenzen    &           &  \\ \hline
 \begin{tabular}{|l||l|l|}
 \hline
 Name          &           & Dateien anzeigen \\ \hline
-Vorbedingung  &           &  \\ \hline
-Normal Ablauf & N1        &  \\ \hline
-              & N2        &  \\ \hline
-              & N3        &  \\ \hline
-              & N4        &  \\ \hline
-              & N5        &  \\ \hline
+Vorbedingung  &           & Datenbankverbindung vorhanden \\ \hline
+Normal Ablauf & N1        & Datenbankverbindung überprüfen \rightarrow F1 \\ \hline
+              & N2        & Pop-Up mit allen möglichen Ziegen \\ \hline
+              & N3        & Zu zeigende Ziegen auswählen \\ \hline
+              & N4        & Pop-Up mit allen möglichen Daten \rightarrow F2 \\ \hline
+              & N5        & Zu zeigende Daten auswählen \\ \hline
+              & N6        & Daten anzeigen \\ \hline
 Nachbedingung &           &  \\ \hline
-Alt.          & Interrupt &  \\ \hline
-Fehler        & F1        &  \\ \hline
-              & F2        &  \\ \hline
-              & F3        &  \\ \hline
-              & F4        &  \\ \hline
+Fehler        & F1        & Datenbank nicht vorhanden \rightarrow N1 \\ \hline
+              & F2        & Ziege hat keine Daten \rightarrow N6 \\ \hline
 Referenzen    &           &  \\ \hline
 \end{tabular}
 \end{table}
@@ -151,18 +149,14 @@ Referenzen    &           &  \\ \hline
 \begin{tabular}{|l||l|l|}
 \hline
 Name          &           & Tiere exportieren \\ \hline
-Vorbedingung  &           &  \\ \hline
-Normal Ablauf & N1        &  \\ \hline
-              & N2        &  \\ \hline
-              & N3        &  \\ \hline
-              & N4        &  \\ \hline
-              & N5        &  \\ \hline
-Nachbedingung &           &  \\ \hline
-Alt.          & A1        & JSON / PDF wählen \\ \hline
-Fehler        & F1        &  \\ \hline
-              & F2        &  \\ \hline
-              & F3        &  \\ \hline
-              & F4        &  \\ \hline
+Vorbedingung  &           & Datenbankverbindung vorhanden \\ \hline
+Normal Ablauf & N1        & Datenbankverbindung prüfen \rightarrow F1 \\ \hline
+              & N2        & Datenformat auswählen \\ \hline
+              & N3        & Speicherort wählen \rightarrow F2 \\ \hline
+              & N4        & Datei generieren \\ \hline
+              & N5        & Datei abspeichern \\ \hline
+Fehler        & F1        & Datenbank nicht vorhanden \rightarrow N1 \\ \hline
+              & F2        & Dateipfad konnte nicht gefunden werden \rightarrow N3 \\ \hline
 Referenzen    &           &  \\ \hline
 \end{tabular}
 \end{table}
@@ -171,4 +165,4 @@ Referenzen    &           &  \\ \hline
 \subsection{Begriffslexikon}
 \subsection{}
 
-\end{document}
+\end{document} 
