@@ -56,111 +56,134 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 \begin{table}[]
 	\begin{tabular}{|l||l|l|}
 		\hline
-		Name          &    & Nutzer hinzufügen                                                  \\ \hline
-		Vorbedingung  &    & Datenbankverbindung vorhanden                                       \\ \hline
-		Normal Ablauf & N1 & Nutzername eingeben $\rightarrow$ F1                                \\ \hline
-		              & N2 & Passwort erstellen $\rightarrow$ F2                                 \\ \hline
-		              & N3 & Passwort wiederholen $\rightarrow$ F2                               \\ \hline
-		Nachbedingung &    & Nutzer erstellt                                                     \\ \hline
-		Fehler        & F1 & Nutzer exisitiert bereits $\rightarrow$ Weiterleitung zur Anmeldung \\ \hline
-		              & F2 & Passwort nicht nach vorgaben $\rightarrow$ N2                       \\ \hline
-		Referenzen    &    &                                                                     \\ \hline
+		Name & & Nutzer hinzufügen \\ \hline
+		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
+		Normal Ablauf & N1 & Nutzername eingeben $\rightarrow$ F1 \\ \hline
+		  & N2 & Passwort erstellen $\rightarrow$ F2 \\ \hline
+		  & N3 & Passwort wiederholen $\rightarrow$ F2 \\ \hline
+		Nachbedingung & & Nutzer erstellt \\ \hline
+		Fehler & F1 & Nutzer exisitiert bereits $\rightarrow$ Weiterleitung zur Anmeldung \\ \hline
+		  & F2 & Passwort nicht nach vorgaben $\rightarrow$ N2 \\ \hline
+		Referenzen & &\\ \hline
 	\end{tabular}
 \end{table}
 
 \begin{table}[]
 	\begin{tabular}{|l||l|l|}
 		\hline
-		Name          &    & Datenbank verbinden                                \\ \hline
-		Vorbedingung  &    &                                                    \\ \hline
-		Normal Ablauf & N1 & IP-Addresse eingeben $\rightarrow$ F1              \\ \hline
-		Alt           & A1 & Lokale Datenbankdatei einlesen $\rightarrow$ F2    \\ \hline
-		              & N2 & Nutzername eingeben $\rightarrow$ F3               \\ \hline
-		              & N3 & Passwort eingeben $\rightarrow$ F4                 \\ \hline
-		Nachbedingung &    & Datenbankverbingung erstellt                       \\ \hline
-		Fehler        & F1 & IP-Addresse fehlherhaft $\rightarrow$ N1           \\ \hline
-		              & F2 & Datei kann nicht geöffnet werden $\rightarrow$ N1 \\ \hline
-		              & F3 & Nutzer exisitert nicht $\rightarrow$ N1            \\ \hline
-		              & F4 & Passwort falsch $\rightarrow$ N1                   \\ \hline
-		Referenzen    &    &                                                    \\ \hline
+		Name & & Datenbank verbinden \\ \hline
+		Vorbedingung & & \\ \hline
+		Normal Ablauf & N1 & IP-Addresse eingeben $\rightarrow$ F1\\ \hline
+		Alt & A1 & Lokale Datenbankdatei einlesen $\rightarrow$ F2 \\ \hline
+		  & N2 & Nutzername eingeben $\rightarrow$ F3 \\ \hline
+		  & N3 & Passwort eingeben $\rightarrow$ F4 \\ \hline
+		Nachbedingung & & Datenbankverbingung erstellt\\ \hline
+		Fehler & F1 & IP-Addresse fehlherhaft $\rightarrow$ N1 \\ \hline
+		  & F2 & Datei kann nicht geöffnet werden $\rightarrow$ N1 \\ \hline
+		  & F3 & Nutzer exisitert nicht $\rightarrow$ N1 \\ \hline
+		& F4 & Passwort falsch $\rightarrow$ N1 \\ \hline
+		Referenzen & & \\ \hline
 	\end{tabular}
 \end{table}
 
 \begin{table}[]
 	\begin{tabular}{|l||l|l|}
 		\hline
-		Name          &    & Neues Tier hinzufügen                        \\ \hline
-		Vorbedingung  &    & Datenbankverbindung vorhanden                 \\ \hline
-		Normal Ablauf & N1 & Datenbankverbindung prüfen $\rightarrow$ F1  \\ \hline
-		              & N2 & Daten zum Tier hinzufügen                    \\ \hline
-		Alt.          & A2 & Tierdatei importieren                         \\ \hline
-		              & N3 & Daten in Datenbank speichern $\rightarrow$ F1 \\ \hline
-		Nachbedingung &    & Tier wurde hinzugefügt                       \\ \hline
-		Fehler        & F1 & Datenbankverbindung verloren $\rightarrow$ N1 \\ \hline
-		Referenzen    &    &                                               \\ \hline
+		Name & & Neues Tier hinzufügen \\ \hline
+		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
+		Normal Ablauf & N1 & Datenbankverbindung prüfen $\rightarrow$ F1 \\ \hline
+		  & N2 & Daten zum Tier hinzufügen \\ \hline
+		Alt. & A2 & Tierdatei importieren \\ \hline
+		& N3 & Daten in Datenbank speichern $\rightarrow$ F1 \\ \hline
+		Nachbedingung &  & Tier wurde hinzugefügt\\ \hline
+		Fehler & F1 & Datenbankverbindung verloren $\rightarrow$ N1 \\ \hline
+		Referenzen & & \\ \hline
 	\end{tabular}
 \end{table}
 
 \begin{table}[]
 	\begin{tabular}{|l||l|l|}
 		\hline
-		Name          &    & Log-In                                    \\ \hline
-		Vorbedingung  &    & Datenbankverbindung vorhanden             \\ \hline
-		Normal Ablauf & N1 & Nutzername eingeben $\rightarrow$ F1      \\ \hline
-		              & N2 & Passwort eingeben $\rightarrow$ F1        \\ \hline
-		Nachbedingung &    & Angemeldet                                \\ \hline
-		Fehler        & F1 & Anmeldung nicht möglich $\rightarrow$ N1 \\ \hline
-		Referenzen    &    &                                           \\ \hline
+		Name & & Log-In \\ \hline
+		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
+		Normal Ablauf & N1 & Nutzername eingeben $\rightarrow$ F1 \\ \hline
+		  & N2 & Passwort eingeben $\rightarrow$ F1 \\ \hline
+		Nachbedingung & & Angemeldet \\ \hline
+		Fehler & F1 & Anmeldung nicht möglich $\rightarrow$ N1 \\ \hline
+		Referenzen & & \\ \hline
 	\end{tabular}
 \end{table}
 
 \begin{table}[]
 	\begin{tabular}{|l||l|l|}
 		\hline
-		Name          &    & Photo machen                                      \\ \hline
-		Vorbedingung  &    & Datenbankverbindung vorhanden                     \\ \hline
+		Name & & Photo machen \\ \hline
+		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
 		Normal Ablauf & N1 & Datenbankverbindung überprüfen $\rightarrow$ F1 \\ \hline
-		              & N2 & Tier wählen $\rightarrow$ F2                     \\ \hline
-		              & N3 & PopUp mit Kamera öffnet sich  $\rightarrow$ F3   \\ \hline
-		              & N4 & Abfrage ob die Bilder gepeichert werden sollen    \\ \hline
-		              & N5 & Bilder abspeichern  $\rightarrow$ F1              \\ \hline
-		Nachbedingung &    &                                                   \\ \hline
-		Fehler        & F1 & Datenbank verbindung fehlt $\rightarrow$ N1       \\ \hline
-		              & F2 & Tier nicht vorhanden  $\rightarrow$ N2            \\ \hline
-		              & F3 & Kameraberechtigung fehlt                          \\ \hline
-		Referenzen    &    &                                                   \\ \hline
-	\end{tabular}\end{table}
+		  & N2 & Tier wählen $\rightarrow$ F2 \\ \hline
+		  & N3 & PopUp mit Kamera öffnet sich $\rightarrow$ F3 \\ \hline
+		  & N4 & Abfrage ob die Bilder gepeichert werden sollen \\ \hline
+		  & N5 & Bilder abspeichern  $\rightarrow$ F1 \\ \hline
+		Nachbedingung & & \\ \hline
+		Fehler & F1 & Datenbank verbindung fehlt $\rightarrow$ N1 \\ \hline
+	    & F2 & Tier nicht vorhanden  $\rightarrow$ N2\\ \hline
+		  & F3 & Kameraberechtigung fehlt \\ \hline
+		Referenzen & & \\ \hline
+	\end{tabular}
+ \end{table}
 	
-	\begin{table}[]\begin{tabular}{|l||l|l|}
+\begin{table}[]
+    \begin{tabular}{|l||l|l|}
 		\hline
 		Name & & Dateien anzeigen \\ \hline
 		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
 		Normal Ablauf & N1 & Datenbankverbindung überprüfen $\rightarrow$ F1 \\ \hline
-		& N2 & Pop-Up mit allen möglichen Ziegen \\ \hline
-		& N3 & Zu zeigende Ziegen auswählen \\ \hline
-		& N4 & Pop-Up mit allen möglichen Daten $\rightarrow$ F2 \\ \hline
-		& N5 & Zu zeigende Daten auswählen \\ \hline
-		& N6 & Daten anzeigen \\ \hline
+		& N2 & Tier wählen \\ \hline
+		& N3 & Pop-Up mit allen möglichen Daten $\rightarrow$ F2 \\ \hline
+		& N4 & Zu zeigende Daten auswählen \\ \hline
+		& N5 & Daten anzeigen \\ \hline
 		Nachbedingung & &  \\ \hline
-		Fehler        & F1 & Datenbank nicht vorhanden $\rightarrow$ N1 \\ \hline
+		Fehler & F1 & Datenbank nicht vorhanden $\rightarrow$ N1 \\ \hline
 		& F2 & Ziege hat keine Daten $\rightarrow$ N6 \\ \hline
-		Referenzen    &  &  \\ \hline
-		\end{tabular}\end{table}
-		
-		\begin{table}[]\begin{tabular}{|l||l|l|}\hline
-			Name & & Tiere exportieren \\ \hline
-			Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
-			Normal Ablauf & N1 & Datenbankverbindung prüfen $\rightarrow$ F1 \\ \hline
-			& N2 & Datenformat auswählen \\ \hline
-			& N3 & Speicherort wählen $\rightarrow$ F2 \\ \hline
-			& N4 & Datei generieren \\ \hline
-			& N5 & Datei abspeichern \\ \hline
-			Fehler & F1 & Datenbank nicht vorhanden $\rightarrow$ N1 \\ \hline
-			& F2 & Dateipfad konnte nicht gefunden werden $\rightarrow$ N3 \\ \hline
-			Referenzen & & \\ \hline
-			\end{tabular}\end{table}
-			\clearpage
-			\section{Anhang}
-			\subsection{Begriffslexikon}
-			\subsection{}
+		Referenzen & & \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[]
+	\begin{tabular}{|l||l|l|}
+		\hline
+		Name & & Daten ändern \\ \hline
+		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
+		Normal Ablauf & N1 & Datenbankverbindung überprüfen $\rightarrow$ F1 \\ \hline
+		& N2 & Tier wählen \\ \hline 
+        & N3 & Pop-Up mit allen möglichen Daten $\rightarrow$ F2 \\ \hline
+		& N3 & Daten ändern \\ \hline
+		& N4 & Popup zur Bestätigung \\ \hline
+		Nachbedingung & & Daten sind gespeichert \\ \hline
+		Fehler & F1 & Datenbank nicht vorhanden $\rightarrow$ N1 \\ \hline
+		& F2 & Ziege hat keine Daten $\rightarrow$ N1 \\ \hline
+		Referenzen & & \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[]
+    \begin{tabular}{|l||l|l|}
+        \hline
+        Name & & Tiere exportieren \\ \hline
+        Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
+        Normal Ablauf & N1 & Datenbankverbindung prüfen $\rightarrow$ F1 \\ \hline
+        & N2 & Datenformat auswählen \\ \hline
+        & N3 & Speicherort wählen $\rightarrow$ F2 \\ \hline
+        & N4 & Datei generieren \\ \hline
+        & N5 & Datei abspeichern \\ \hline
+        Fehler & F1 & Datenbank nicht vorhanden $\rightarrow$ N1 \\ \hline
+        & F2 & Dateipfad konnte nicht gefunden werden $\rightarrow$ N3 \\ \hline
+        Referenzen & & \\ \hline
+    \end{tabular}
+\end{table}
+\clearpage
+
+\section{Anhang}
+\subsection{Begriffslexikon}
+\subsection{}
 \end{document} 
