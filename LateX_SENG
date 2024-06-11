@@ -27,6 +27,22 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 
 \section{Beschreibung}
 \subsection{Grundlegende Funktionen}
+    \subsubsection{Log-In Online}
+    Log-In Online sorgt für die Verbindung mit einem Server auf dem bereits angelegte Daten vorhanden sind. Dies läuft über die Angabe einer IP-Adresse und danach optionaler Eingabe von Nutzername und Passwort.
+    \subsubsection{Log-In Local}
+    Log-In Local ruft den lokalen Speicher des Geräts auf. Auf diesem sind die einzelnen Tiere als JSON gespeichert. Hierbei gibt es keine Online Funktion und die Daten können nur Lokalüber das Gerät verändert werden.
+    \subsubsection{Tier hinzufügen}
+    Tier hinzufügen ist ein Button oben links im Interface. Hierbei hat der User die Möglichkeit entweder über eine JSON-Datei ein Tier zu importieren oder ein komplett neues Tier anzulegen. Dabei muss ein Name, eine Nummer und Fotos des Tiers gemacht werden und mit diesen Daten wird ein neues Tier in die Datenbank aufgenommen.
+    \subsubsection{Dropdown des Tieres}
+    Dropdown des Tieres öffnet ein Menu mit verschiedenen Auswahlmöglichkeiten auf das ausgewählte Tier. Die Möglichkeiten sind Neues Foto und Daten anzeigen 
+    \subsubsection{Neues Foto}
+    Neues Foto öffnet die Kamera und lässt neue Fotos des Tiers machen um das aktuelle Gewicht zu bestimmen. Diese wird automatisch in den Daten des Tieres gespeichert und das aktuelle Gewicht mit Datum aktualisiert.
+    \subsubsection{Daten anzeigen}
+    Daten anzeigen öffnet ein neues Interface auf dem verschiedene Daten des ausgewählten Tiers angezeigt werden. Jedes dieser Datensegmente lässt sich auswählen und es wird eine Historik der angelegten Daten dieses Typs angezeigt. Daten sind Gewicht, Name, Nummer, Nahrungsmittel, Medizin und Notizen. Unter diesen werden die Bilder des Tiers angefangen mit dem letzten angezeigt. Im Interface befindet sich ein Button um die Daten zu bearbeiten
+    \subsubsection{Daten ändern}
+    Daten ändern ist ein Unterpunkt von Daten anzeigen mit der Erweiterung, dass mit der Auswahl eines spezifischen Unterpunktes die ausgewählte Spalte manuell geändert werden kann, falls Fehler bei der ersten Eingabe gemacht wurden.
+    
+
 \subsection{Benutzerprofile}
 \subsection{Einbettung}
 \subsection{Einschränkungen}
