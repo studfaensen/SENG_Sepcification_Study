@@ -8,7 +8,7 @@
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
-\title{SENG Spezifikation goatWeight}
+\title{SENG Spezifikation GoatWeight}
 \author{Colonel Sanders}
 \date{ }
 \begin{document}
@@ -24,6 +24,17 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 
 \subsection{Fachbegriffe und Abkürzungen}
 
+\begin{table}[]
+	\begin{tabular}{|l|l|}
+		\hline
+		  Begriff & Bedeutung \\ \hline \hline
+        UI & Benutzeroberfläche \\ \hline
+        JSON & Java Script Object Notation \\ 
+        & Plattformunabhäniges Dateiformat zur einfachen Übertragung \\ \hline
+        Main Screen & erste angezeigte Seite beim Öffnen der App \\ \hline
+        
+	\end{tabular}
+\end{table}
 
 \section{Beschreibung}
 \subsection{Grundlegende Funktionen}
@@ -51,18 +62,37 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 \subsection{Mengengerüst}
 \subsection{Funktionale Anforderungen}
 \section{Benutzeroberfläche}
-
 \begin{center}
-	\includegraphics[scale=0.57]{UIMockup.pdf}
+	\includegraphics[scale=0.25]{UIMockup.pdf}
 \end{center}
 \clearpage
 
 \begin{itemize}
-	\item 1.Wir benötigen Main Screen mit Elementen(log in oder lokal)
-	\item 2.Liste mit allen Tieren mit Element(Pop-Up für Tiere, Neues Tier und Daten exportieren, Warnhinweise für Tiere mit Anzeichen für Parasitenbefall)
-	\item 2.1 Pop-Up Tiere, Daten des Tiers(Gewicht, Medizinische Versorgung, Nahrungsmittel, Nummer, Bilder, Foto machen für Gewichtsaktualisierung, Tier entfernen)
-	\item 2.2 Neues Tier anlegen mit Nummer, Bild, Gewicht evtl. Notizen, Import aus JSON
-	\item 2.3 Daten exportieren, Alle oder einzelne Tiere auswählen(JSON/PDF)
+	\item
+        1.Wir benötigen Main Screen mit Elementen(log in oder lokal)
+         \begin{center}
+        	\includegraphics[scale=0.6]{Sign_in.pdf}
+        \end{center}
+	\item
+        2.Liste mit allen Tieren mit Element(Pop-Up für Tiere, Neues Tier und Daten exportieren, Warnhinweise für Tiere mit Anzeichen für Parasitenbefall)
+        \begin{center}
+        	\includegraphics[scale=0.6]{Goats_Overview.pdf}
+        \end{center}
+	\item
+        2.1 Pop-Up Tiere, Daten des Tiers(Gewicht, Medizinische Versorgung, Nahrungsmittel, Nummer, Bilder, Foto machen für Gewichtsaktualisierung, Tier entfernen)
+        \begin{center}
+        	\includegraphics[scale=0.6]{Goat_Data.pdf}
+        \end{center}
+	\item
+        2.2 Neues Tier anlegen mit Nummer, Bild, Gewicht evtl. Notizen, Import aus JSON
+        \begin{center}
+        	\includegraphics[scale=0.6]{Import.pdf}
+        \end{center}
+	\item
+        2.3 Daten exportieren einzelne Tiere auswählen(JSON/PDF)
+        \begin{center}
+        	\includegraphics[scale=0.6]{Export.pdf}
+        \end{center}
 \end{itemize}
 
 \section{Anwendungsfälle}
@@ -208,4 +238,5 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 \section{Anhang}
 \subsection{Begriffslexikon}
 \subsection{}
+
 \end{document} 
