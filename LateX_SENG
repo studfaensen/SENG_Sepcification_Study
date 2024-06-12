@@ -51,6 +51,12 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 \subsection{Mengengerüst}
 \subsection{Funktionale Anforderungen}
 \section{Benutzeroberfläche}
+
+\begin{center}
+	\includegraphics[scale=0.57]{UIMockup.pdf}
+\end{center}
+\clearpage
+
 \begin{itemize}
 	\item 1.Wir benötigen Main Screen mit Elementen(log in oder lokal)
 	\item 2.Liste mit allen Tieren mit Element(Pop-Up für Tiere, Neues Tier und Daten exportieren, Warnhinweise für Tiere mit Anzeichen für Parasitenbefall)
