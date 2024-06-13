@@ -24,15 +24,14 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 
 \subsection{Fachbegriffe und Abkürzungen}
 
-\begin{table}[]
-	\begin{tabular}{|l|l|}
+\begin{table}[htp]
+	\begin{tabular}{|p{5cm}|p{8cm}|}
 		\hline
 		  Begriff & Bedeutung \\ \hline \hline
         UI & Benutzeroberfläche \\ \hline
         JSON & Java Script Object Notation \\ 
         & Plattformunabhäniges Dateiformat zur einfachen Übertragung \\ \hline
         Main Screen & erste angezeigte Seite beim Öffnen der App \\ \hline
-        
 	\end{tabular}
 \end{table}
 
@@ -105,9 +104,10 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 
 \subsection{Use-Case-Beschreibungen}
 
-\begin{table}[]
-	\begin{tabular}{|l||l|l|}
+\begin{table}[htp]
+	\begin{tabular}{|p{3.5cm}||p{0.5cm}|p{9cm}|}
 		\hline
+        ID & & 1 \\ \hline
 		Name & & Nutzer hinzufügen \\ \hline
 		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
 		Normal Ablauf & N1 & Nutzername eingeben $\rightarrow$ F1 \\ \hline
@@ -120,15 +120,18 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 	\end{tabular}
 \end{table}
 
-\begin{table}[]
-	\begin{tabular}{|l||l|l|}
+\begin{table}[htp]
+	\begin{tabular}{|p{3.5cm}||p{0.5cm}|p{9cm}|}
 		\hline
+        ID & & 2 \\ \hline
 		Name & & Datenbank verbinden \\ \hline
 		Vorbedingung & & \\ \hline
 		Normal Ablauf & N1 & IP-Addresse eingeben $\rightarrow$ F1\\ \hline
-		Alt & A1 & Lokale Datenbankdatei einlesen $\rightarrow$ F2 \\ \hline
 		  & N2 & Nutzername eingeben $\rightarrow$ F3 \\ \hline
 		  & N3 & Passwort eingeben $\rightarrow$ F4 \\ \hline
+        Alternativ & A1 & Lokale Datenbankdatei einlesen $\rightarrow$ F2 \\ \hline
+        & A2 & Nutzername eingeben $\rightarrow$ F3 \\ \hline
+		  & A3 & Passwort eingeben $\rightarrow$ F4 \\ \hline
 		Nachbedingung & & Datenbankverbingung erstellt\\ \hline
 		Fehler & F1 & IP-Addresse fehlherhaft $\rightarrow$ N1 \\ \hline
 		  & F2 & Datei kann nicht geöffnet werden $\rightarrow$ N1 \\ \hline
@@ -138,24 +141,28 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 	\end{tabular}
 \end{table}
 
-\begin{table}[]
-	\begin{tabular}{|l||l|l|}
+\begin{table}[htp]
+	\begin{tabular}{|p{3.5cm}||p{0.5cm}|p{9cm}|}
 		\hline
+        ID & & 3 \\ \hline
 		Name & & Neues Tier hinzufügen \\ \hline
 		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
 		Normal Ablauf & N1 & Datenbankverbindung prüfen $\rightarrow$ F1 \\ \hline
 		  & N2 & Daten zum Tier hinzufügen \\ \hline
-		Alt. & A2 & Tierdatei importieren \\ \hline
 		& N3 & Daten in Datenbank speichern $\rightarrow$ F1 \\ \hline
+        Alternativ & A1 & Datenbankverbindung prüfen $\rightarrow$ F1 \\ \hline
+        & A2 & Tierdatei importieren \\ \hline
+        & A3 & Daten in Datenbank speichern $\rightarrow$ F1 \\ \hline
 		Nachbedingung &  & Tier wurde hinzugefügt\\ \hline
 		Fehler & F1 & Datenbankverbindung verloren $\rightarrow$ N1 \\ \hline
 		Referenzen & & \\ \hline
 	\end{tabular}
 \end{table}
 
-\begin{table}[]
-	\begin{tabular}{|l||l|l|}
+\begin{table}[htp]
+	\begin{tabular}{|p{3.5cm}||p{0.5cm}|p{9cm}|}
 		\hline
+        ID & & 4 \\ \hline
 		Name & & Log-In \\ \hline
 		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
 		Normal Ablauf & N1 & Nutzername eingeben $\rightarrow$ F1 \\ \hline
@@ -166,9 +173,10 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 	\end{tabular}
 \end{table}
 
-\begin{table}[]
-	\begin{tabular}{|l||l|l|}
+\begin{table}[htp]
+	\begin{tabular}{|p{3.5cm}||p{0.5cm}|p{9cm}|}
 		\hline
+        ID & & 5 \\ \hline
 		Name & & Photo machen \\ \hline
 		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
 		Normal Ablauf & N1 & Datenbankverbindung überprüfen $\rightarrow$ F1 \\ \hline
@@ -184,9 +192,10 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 	\end{tabular}
  \end{table}
 	
-\begin{table}[]
-    \begin{tabular}{|l||l|l|}
+\begin{table}[htp]
+    \begin{tabular}{|p{3.5cm}||p{0.5cm}|p{9cm}|}
 		\hline
+        ID & & 6 \\ \hline
 		Name & & Dateien anzeigen \\ \hline
 		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
 		Normal Ablauf & N1 & Datenbankverbindung überprüfen $\rightarrow$ F1 \\ \hline
@@ -201,9 +210,10 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 	\end{tabular}
 \end{table}
 
-\begin{table}[]
-	\begin{tabular}{|l||l|l|}
+\begin{table}[htp]
+	\begin{tabular}{|p{3.5cm}||p{0.5cm}|p{9cm}|}
 		\hline
+        ID & & 7 \\ \hline
 		Name & & Daten ändern \\ \hline
 		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
 		Normal Ablauf & N1 & Datenbankverbindung überprüfen $\rightarrow$ F1 \\ \hline
@@ -218,9 +228,10 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 	\end{tabular}
 \end{table}
 
-\begin{table}[]
-    \begin{tabular}{|l||l|l|}
+\begin{table}[htp]
+    \begin{tabular}{|p{3.5cm}||p{0.5cm}|p{9cm}|}
         \hline
+        ID & & 8 \\ \hline
         Name & & Tiere exportieren \\ \hline
         Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
         Normal Ablauf & N1 & Datenbankverbindung prüfen $\rightarrow$ F1 \\ \hline
