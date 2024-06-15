@@ -76,8 +76,25 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen u
 \end{itemize}
 \section{Anforderungen}
 \subsection{Leistungsanforderungen}
+\begin{itemize}
+\item \textbf{Betriebssystem:}
+\item Android 8.0 (Oreo) oder höher
+\item iOS 12.0 oder höher
+\item \textbf{Prozessor:}
+\item Quad-Core 1.8 GHz oder schneller
+\item \textbf{Arbeitsspeicher (RAM):}
+\item Mindestens 2 GB RAM
+\item \textbf{Interner Speicher:}
+\item Mindestens 16 GB freier Speicherplatz
+\item \textbf{Kamera:}
+\item Mindestens 8 Megapixel mit Autofokus
+\item \textbf{Bildschirmauflösung:}
+\item Mindestens 1280 x 720 Pixel
+\item \textbf{Netzwerk:}
+\item WLAN (802.11 b/g/n)
+\item Optional: Mobile Datenverbindung (3G/4G)
+\end{itemize}
 \subsection{Mengengerüst}
-\subsection{Funktionale Anforderungen}
 \section{Benutzeroberfläche}
 \begin{figure}
     \centering
