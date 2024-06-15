@@ -32,6 +32,14 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
         JSON & Java Script Object Notation \\ 
         & Plattformunabhäniges Dateiformat zur einfachen Übertragung \\ \hline
         Main Screen & erste angezeigte Seite beim Öffnen der App \\ \hline
+        App & Mobile Application \\
+        & Softwareprogramm für Mobilgeräte \\ \hline
+        OS & Betriebssystem \\ \hline
+        Owner & Besitzer der Datenbank \\
+        & Hat jegliche Administoren Rechte \\ \hline
+        User & jegliche anderen Benutzer \\ \hline 
+        Use-Case-Diagramm & hier werden alle Anwendungsmögichkeiten gezeigt \\ \hline
+        Use-Cases & eine übersicht aller Anwendungsmöglichkeiten \\ \hline 
 	\end{tabular}
 \end{table}
 
@@ -70,7 +78,6 @@ Folgende Kenngrößen sind für das System relevant:
     \item Es gibt ca. 40-60 Ziegen mit bereits bestehenden eindeutigen Idenifikatoren.
     \item Durch die bestehende Zucht der Ziegen, kann davon ausgegangen werden, dass jährlich mehrere neue Ziegen gleichzeitig in die Datenbank hinzugefügt werden.
 \end{itemize}
-\subsection{Funktionale Anforderungen}
 \section{Benutzeroberfläche}
 \begin{figure}
     \centering
@@ -151,8 +158,8 @@ Folgende Kenngrößen sind für das System relevant:
 \begin{table}[htp]
 	\begin{tabular}{|p{3.5cm}||p{0.5cm}|p{9cm}|}
 		\hline
-        ID & & 2 \\ \hline
-		Name & & Datenbank verbinden \\ \hline
+        ID & & 2 \\ \hline	
+        Name & & Datenbank verbinden \\ \hline
 		Vorbedingung & & \\ \hline
 		Normal Ablauf & N1 & IP-Addresse eingeben $\rightarrow$ F1\\ \hline
 		  & N2 & Nutzername eingeben $\rightarrow$ F3 \\ \hline
@@ -277,9 +284,5 @@ Folgende Kenngrößen sind für das System relevant:
     \end{tabular}
 \end{table}
 \clearpage
-
-\section{Anhang}
-\subsection{Begriffslexikon}
-\subsection{}
 
 \end{document} 
