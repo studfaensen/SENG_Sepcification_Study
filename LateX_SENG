@@ -13,7 +13,38 @@
 \date{ }
 \begin{document}
 
-\maketitle
+
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    \Huge
+    \textbf{"Goatimate"}
+    
+    \vspace{0.5cm}
+    \LARGE
+    Softwarespezifikation für das Modul SENG im Sommersemester 2024
+    
+    \vspace{1.5cm}
+    
+    \textbf{Luka Faensen} \\
+    \textbf{Gabriel Müller}
+    
+    \vfill
+    
+    \Large
+    \textbf{Datum:} \\
+    \today
+    
+    \vspace{1.5cm}
+    
+    \large
+    \textbf{Zusammenfassung:} \\
+    Diese Spezifikation beschreibt die Software "Goatimate", eine App zur Bestimmung des Gewichts von Ziegen anhand von Bildern. 
+    
+    \vspace{1.5cm}
+    
+\end{titlepage}
 
 \tableofcontents
 \cleardoublepage
@@ -211,7 +242,7 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen u
 	\end{tabular}
 \end{table}
 
-\begin{table}[htp
+\begin{table}[htp]
 	\begin{tabular}{|p{3.5cm}||p{0.5cm}|p{9cm}|}
 		\hline
         ID & & 4 \\ \hline
