@@ -2,6 +2,7 @@
 \usepackage{titlesec}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{hyperref}
 \setcounter{secnumdepth}{4}
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
@@ -333,5 +334,9 @@ Folgende Kenngrößen sind für das System relevant:
     \end{tabular}
 \end{table}
 \clearpage
+
+\section{Anhang}
+\subsection{Versionshistorie}
+Die Versionshistorie, sowie jegliche Raw-Version der Dateien und LateX-Code sind unter diesem \href{https://github.com/studfaensen/SENG_Sepcification_Study}{GitHub-Link} zu finden.
 
 \end{document} 
