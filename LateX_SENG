@@ -63,6 +63,14 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
         JSON & Java Script Object Notation \\ 
         & Plattformunabhäniges Dateiformat zur einfachen Übertragung \\ \hline
         Main Screen & erste angezeigte Seite beim Öffnen der App \\ \hline
+        App & Mobile Application \\
+        & Softwareprogramm für Mobilgeräte \\ \hline
+        OS & Betriebssystem \\ \hline
+        Owner & Besitzer der Datenbank \\
+        & Hat jegliche Administoren Rechte \\ \hline
+        User & jegliche anderen Benutzer \\ \hline 
+        Use-Case-Diagramm & hier werden alle Anwendungsmögichkeiten gezeigt \\ \hline
+        Use-Cases & eine übersicht aller Anwendungsmöglichkeiten \\ \hline 
 	\end{tabular}
 \end{table}
 
@@ -83,7 +91,6 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
     \subsubsection{Daten ändern}
     Daten ändern ist ein Unterpunkt von Daten anzeigen mit der Erweiterung, dass mit der Auswahl eines spezifischen Unterpunktes die ausgewählte Spalte manuell geändert werden kann, falls Fehler bei der ersten Eingabe gemacht wurden.
     
-
 \subsection{Benutzerprofile}
 \subsubsection{Online}
 Im Onlinemodus gibt es zwei Benutzerprofile. Der Owner/Admin kann neue User anlegen. Der Owner hat vollen Zugriff auf alle Funktionen während User Zugriffsgenehmigungen auf die verschiedenen Funktionen vom Owner bekommen. 
@@ -92,41 +99,29 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen u
 \subsection{Einbettung}
 "Goatimate" benötigt im Onlinemodus eine Schnittstelle zum Server und in allen Modi Zugriff auf die Kamera um Fotos der Tiere zu machen sowie im lokalen Modus Zugriff auf den Speicher des Geräts um die JSON-Files der Tiere zu speichern und zu bearbeiten.
 \subsection{Einschränkungen}
-\subsubsection{Technische Einschränkungen}
+\subsubsection{Technische Einschränkunge}
 \begin{itemize}
-\item \textbf{Hardware-Kompatibilität:} Die App erfordert eine Mindesthardware-Spezifikation, einschließlich einer funktionierenden Kamera.
-\item \textbf{Betriebssysteme:} "Goatimate" ist nur mit den neuesten Versionen von iOS und Android kompatibel. Ältere Versionen der Betriebssysteme werden nicht unterstützt.
-\item \textbf{Internetverbindung:} Für den Online-Modus ist eine stabile Internetverbindung erforderlich, um Daten mit dem Server synchronisieren zu können.
-\item \textbf{Speicherplatz:} Ausreichender interner Speicherplatz ist erforderlich, um lokale JSON-Dateien und Fotos der Tiere zu speichern.
+  \item \textbf{Hardware-Kompatibilität:} Die App erfordert eine Mindesthardware-Spezifikation, einschließlich einer funktionierenden Kamera.
+  \item \textbf{Betriebssysteme:} "Goatimate" ist nur mit den neuesten Versionen von iOS und Android kompatibel. Ältere Versionen der Betriebssysteme werden nicht unterstützt.
+  \item \textbf{Internetverbindung:} Für den Online-Modus ist eine stabile Internetverbindung erforderlich, um Daten mit dem Server synchronisieren zu können.
+  \item \textbf{Speicherplatz:} Ausreichender interner Speicherplatz ist erforderlich, um lokale JSON-Dateien und Fotos der Tiere zu speichern.
 \end{itemize}
 \subsubsection{Software-Einschränkungen}
 \begin{itemize}
-\item \textbf{Bildqualität:} Die Genauigkeit der Gewichtsmessung hängt stark von der Qualität und Klarheit der aufgenommenen Fotos ab. Unscharfe oder schlecht belichtete Bilder können zu ungenauen Ergebnissen führen.
-\item \textbf{JSON-Kompatibilität:} Die App kann nur JSON-Dateien verarbeiten, die einem spezifischen Format entsprechen. Ungültige oder fehlerhaft formatierte Dateien werden nicht erkannt.
-\item \textbf{Nutzerverwaltung:} Im Online-Modus ist die Nutzerverwaltung durch den Owner/Admin beschränkt. Der Owner/Admin hat die volle Kontrolle über die Nutzerrechte, während normale User nur die ihnen zugewiesenen Rechte ausüben können.
-\item \textbf{Kamera-Zugriff:} Die App benötigt dauerhaften Zugriff auf die Kamera des Geräts. Einschränkungen durch Geräteeinstellungen oder Benutzerberechtigungen können die Funktionalität beeinträchtigen.
+  \item \textbf{Bildqualität:} Die Genauigkeit der Gewichtsmessung hängt stark von der Qualität und Klarheit der aufgenommenen Fotos ab. Unscharfe oder schlecht belichtete Bilder können zu ungenauen Ergebnissen führen.
+  \item \textbf{JSON-Kompatibilität:} Die App kann nur JSON-Dateien verarbeiten, die einem spezifischen Format entsprechen. Ungültige oder fehlerhaft formatierte Dateien werden nicht erkannt.
+  \item \textbf{Nutzerverwaltung:} Im Online-Modus ist die Nutzerverwaltung durch den Owner/Admin beschränkt. Der Owner/Admin hat die volle Kontrolle über die Nutzerrechte, während normale User nur die ihnen zugewiesenen Rechte ausüben können.
+  \item \textbf{Kamera-Zugriff:} Die App benötigt dauerhaften Zugriff auf die Kamera des Geräts. Einschränkungen durch Geräteeinstellungen oder Benutzerberechtigungen können die Funktionalität beeinträchtigen.
 \end{itemize}
 \section{Anforderungen}
-\subsection{Leistungsanforderungen}
-\begin{itemize}
-\item \textbf{Betriebssystem:}
-\item Android 8.0 (Oreo) oder höher
-\item iOS 12.0 oder höher
-\item \textbf{Prozessor:}
-\item Quad-Core 1.8 GHz oder schneller
-\item \textbf{Arbeitsspeicher (RAM):}
-\item Mindestens 2 GB RAM
-\item \textbf{Interner Speicher:}
-\item Mindestens 16 GB freier Speicherplatz
-\item \textbf{Kamera:}
-\item Mindestens 8 Megapixel mit Autofokus
-\item \textbf{Bildschirmauflösung:}
-\item Mindestens 1280 x 720 Pixel
-\item \textbf{Netzwerk:}
-\item WLAN (802.11 b/g/n)
-\item Optional: Mobile Datenverbindung (3G/4G)
-\end{itemize}
 \subsection{Mengengerüst}
+Folgende Kenngrößen sind für das System relevant:
+\begin{itemize}
+    \item Die App kann als Einzelplatzanwendung mit und ebenfalls ohne Netzwerkverbindung arbeiten. Somit wird sie immer von einem einzelnen Anwender bedient, kann aber auf Daten anderer Anwender zugreifen
+    \item Da Nutzer selbst hinzugefügt werden können, gibt es keine festgelegte Anzahl. Hierbei ist es relevant die Datenbank für gleichzeitige Zugriffe abzusichern.
+    \item Es gibt ca. 40-60 Ziegen mit bereits bestehenden eindeutigen Idenifikatoren.
+    \item Durch die bestehende Zucht der Ziegen, kann davon ausgegangen werden, dass jährlich mehrere neue Ziegen gleichzeitig in die Datenbank hinzugefügt werden.
+\end{itemize}
 \section{Benutzeroberfläche}
 \begin{figure}
     \centering
@@ -197,6 +192,7 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen u
 		  & N3 & Passwort wiederholen $\rightarrow$ F2 \\ \hline
         & N4 & Rechte des Nutzers festlegen \\ \hline
 		Nachbedingung & & Nutzer ist erstellt \\ \hline
+        Actor & & Owner \\ \hline 
 		Fehler & F1 & Nutzer exisitiert bereits $\rightarrow$ Weiterleitung zur Anmeldung \\ \hline
 		  & F2 & Passwort nicht nach vorgaben $\rightarrow$ N2 \\ \hline
 		Referenzen & &\\ \hline
@@ -206,8 +202,8 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen u
 \begin{table}[htp]
 	\begin{tabular}{|p{3.5cm}||p{0.5cm}|p{9cm}|}
 		\hline
-        ID & & 2 \\ \hline
-		Name & & Datenbank verbinden \\ \hline
+        ID & & 2 \\ \hline	
+        Name & & Datenbank verbinden \\ \hline
 		Vorbedingung & & \\ \hline
 		Normal Ablauf & N1 & IP-Addresse eingeben $\rightarrow$ F1\\ \hline
 		  & N2 & Nutzername eingeben $\rightarrow$ F3 \\ \hline
@@ -216,6 +212,7 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen u
         & A2 & Nutzername eingeben $\rightarrow$ F3 \\ \hline
 		  & A3 & Passwort eingeben $\rightarrow$ F4 \\ \hline
 		Nachbedingung & & Datenbankverbingung ist erstellt\\ \hline
+        Actor & & User, Owner \\ \hline 
 		Fehler & F1 & IP-Addresse fehlherhaft $\rightarrow$ N1 \\ \hline
 		  & F2 & Datei kann nicht geöffnet werden $\rightarrow$ N1 \\ \hline
 		  & F3 & Nutzer exisitert nicht $\rightarrow$ N1 \\ \hline
@@ -237,6 +234,7 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen u
         & A2 & Tierdatei importieren \\ \hline
         & A3 & Daten speichern $\rightarrow$ F1 \\ \hline
 		Nachbedingung &  & Tier ist hinzugefügt\\ \hline
+        Actor & & Owner \\ \hline 
 		Fehler & F1 & Datenbankverbindung verloren $\rightarrow$ N1 \\ \hline
 		Referenzen & & \\ \hline
 	\end{tabular}
@@ -251,6 +249,7 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen u
 		Normal Ablauf & N1 & Nutzername eingeben $\rightarrow$ F1 \\ \hline
 		  & N2 & Passwort eingeben $\rightarrow$ F1 \\ \hline
 		Nachbedingung & & Angemeldet \\ \hline
+        Actor & & User, Owner \\ \hline 
 		Fehler & F1 & Anmeldung nicht möglich $\rightarrow$ N1 \\ \hline
 		Referenzen & & \\ \hline
 	\end{tabular}
@@ -267,6 +266,7 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen u
 		  & N3 & Bilder nach abfrage überprüfen und bestätigen \\ \hline
 		  & N4 & Bilder abspeichern  $\rightarrow$ F1 \\ \hline
 		Nachbedingung & & \\ \hline
+        Actor & & User, Owner \\ \hline 
 		Fehler & F1 & Datenbank verbindung fehlt $\rightarrow$ N1 \\ \hline
 	    & F2 & Tier nicht vorhanden  $\rightarrow$ N2\\ \hline
 		  & F3 & Kameraberechtigung fehlt \\ \hline
@@ -285,6 +285,7 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen u
 		& N3 & Zu zeigende Daten auswählen \\ \hline
 		& N4 & Daten anzeigen \\ \hline
 		Nachbedingung & &  \\ \hline
+        Actor & & User, Owner \\ \hline 
 		Fehler & F1 & Datenbank nicht vorhanden $\rightarrow$ N1 \\ \hline
 		& F2 & Ziege hat keine Daten $\rightarrow$ N6 \\ \hline
 		Referenzen & & \\ \hline
@@ -301,6 +302,7 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen u
         & N3 & Daten ändern \\ \hline
 		& N3 & Nach abfrage bestätigen \\ \hline
 		Nachbedingung & & Daten sind gespeichert \\ \hline
+        Actor & & User, Owner \\ \hline 
 		Fehler & F1 & Datenbank nicht vorhanden $\rightarrow$ N1 \\ \hline
 		& F2 & Ziege hat keine Daten $\rightarrow$ N1 \\ \hline
 		Referenzen & & \\ \hline
@@ -319,15 +321,12 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen u
         & N4 & Datei abspeichern \\ \hline
         Alternativ Ablauf & A1 & Tier löschen wählen \\ \hline
         & A2 & Tierlöschung bestätigen \\ \hline
+        Actor & & User, Owner \\ \hline 
         Fehler & F1 & Datenbank nicht vorhanden $\rightarrow$ N1 \\ \hline
         & F2 & Dateipfad konnte nicht gefunden werden $\rightarrow$ N3 \\ \hline
         Referenzen & & \\ \hline
     \end{tabular}
 \end{table}
 \clearpage
-
-\section{Anhang}
-\subsection{Begriffslexikon}
-\subsection{}
 
 \end{document} 
