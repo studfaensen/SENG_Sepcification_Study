@@ -60,7 +60,20 @@ Im Onlinemodus gibt es zwei Benutzerprofile. Der Owner/Admin kann neue User anle
 Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen und Rechte der Applikation hat. Hierbei gibt es keine EInschränkungen, er kann innerhalb der Applikation alles Bearbeiten.
 \subsection{Einbettung}
 "Goatimate" benötigt im Onlinemodus eine Schnittstelle zum Server und in allen Modi Zugriff auf die Kamera um Fotos der Tiere zu machen sowie im lokalen Modus Zugriff auf den Speicher des Geräts um die JSON-Files der Tiere zu speichern und zu bearbeiten.
-\subsection{Einschränkungen}
+\subsection{Technische Einschränkungen}
+\begin{itemize}
+\item \textbf{Hardware-Kompatibilität:} Die App erfordert eine Mindesthardware-Spezifikation, einschließlich einer funktionierenden Kamera.
+\item \textbf{Betriebssysteme:} "Goatimate" ist nur mit den neuesten Versionen von iOS und Android kompatibel. Ältere Versionen der Betriebssysteme werden nicht unterstützt.
+\item \textbf{Internetverbindung:} Für den Online-Modus ist eine stabile Internetverbindung erforderlich, um Daten mit dem Server synchronisieren zu können.
+\item \textbf{Speicherplatz:} Ausreichender interner Speicherplatz ist erforderlich, um lokale JSON-Dateien und Fotos der Tiere zu speichern.
+\end{itemize}
+\subsection{Software-Einschränkungen}
+\begin{itemize}
+\item \textbf{Bildqualität:} Die Genauigkeit der Gewichtsmessung hängt stark von der Qualität und Klarheit der aufgenommenen Fotos ab. Unscharfe oder schlecht belichtete Bilder können zu ungenauen Ergebnissen führen.
+\item \textbf{JSON-Kompatibilität:} Die App kann nur JSON-Dateien verarbeiten, die einem spezifischen Format entsprechen. Ungültige oder fehlerhaft formatierte Dateien werden nicht erkannt.
+\item \textbf{Nutzerverwaltung:} Im Online-Modus ist die Nutzerverwaltung durch den Owner/Admin beschränkt. Der Owner/Admin hat die volle Kontrolle über die Nutzerrechte, während normale User nur die ihnen zugewiesenen Rechte ausüben können.
+\item \textbf{Kamera-Zugriff:} Die App benötigt dauerhaften Zugriff auf die Kamera des Geräts. Einschränkungen durch Geräteeinstellungen oder Benutzerberechtigungen können die Funktionalität beeinträchtigen.
+\end{itemize}
 \section{Anforderungen}
 \subsection{Leistungsanforderungen}
 \subsection{Mengengerüst}
