@@ -8,7 +8,7 @@
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
-\title{SENG Spezifikation GoatWeight}
+\title{SENG Spezifikation Goatimate}
 \author{Colonel Sanders}
 \date{ }
 \begin{document}
@@ -38,23 +38,28 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 \section{Beschreibung}
 \subsection{Grundlegende Funktionen}
     \subsubsection{Log-In Online}
-    Log-In Online sorgt für die Verbindung mit einem Server auf dem bereits angelegte Daten vorhanden sind. Dies läuft über die Angabe einer IP-Adresse und danach optionaler Eingabe von Nutzername und Passwort.
+    Log-In Online sorgt für die Verbindung mit einem Server auf dem bereits angelegte Daten vorhanden sind. Dies läuft über die Angabe einer IP-Adresse[1] und danach optionaler Eingabe von Nutzername[2] und Passwort[3], danach kann man mit dem Sign-In Button[4] sich einloggen..
     \subsubsection{Log-In Local}
-    Log-In Local ruft den lokalen Speicher des Geräts auf. Auf diesem sind die einzelnen Tiere als JSON gespeichert. Hierbei gibt es keine Online Funktion und die Daten können nur Lokalüber das Gerät verändert werden.
+    Log-In Local ruft den lokalen Speicher des Geräts auf. Auf diesem sind die einzelnen Tiere als JSON gespeichert. Hierbei gibt es keine Online Funktion und die Daten können nur Lokal über das Gerät verändert werden. Den lokalen Modus startet man indem man den Dateipfad[1] auf dem Gerät angibt .
     \subsubsection{Tier hinzufügen}
-    Tier hinzufügen ist ein Button oben links im Interface. Hierbei hat der User die Möglichkeit entweder über eine JSON-Datei ein Tier zu importieren oder ein komplett neues Tier anzulegen. Dabei muss ein Name, eine Nummer und Fotos des Tiers gemacht werden und mit diesen Daten wird ein neues Tier in die Datenbank aufgenommen.
+    Tier hinzufügen[6] ist ein Button oben rechts im Interface. Hierbei hat der User die Möglichkeit entweder über eine JSON-Datei[14] ein Tier zu importieren oder ein komplett neues Tier anzulegen. Dabei muss ein Name, eine Nummer und Fotos des Tiers gemacht werden und mit diesen Daten wird ein neues Tier in die Datenbank aufgenommen[15].
     \subsubsection{Dropdown des Tieres}
     Dropdown des Tieres öffnet ein Menu mit verschiedenen Auswahlmöglichkeiten auf das ausgewählte Tier. Die Möglichkeiten sind Neues Foto und Daten anzeigen 
-    \subsubsection{Neues Foto}
-    Neues Foto öffnet die Kamera und lässt neue Fotos des Tiers machen um das aktuelle Gewicht zu bestimmen. Diese wird automatisch in den Daten des Tieres gespeichert und das aktuelle Gewicht mit Datum aktualisiert.
     \subsubsection{Daten anzeigen}
-    Daten anzeigen öffnet ein neues Interface auf dem verschiedene Daten des ausgewählten Tiers angezeigt werden. Jedes dieser Datensegmente lässt sich auswählen und es wird eine Historik der angelegten Daten dieses Typs angezeigt. Daten sind Gewicht, Name, Nummer, Nahrungsmittel, Medizin und Notizen. Unter diesen werden die Bilder des Tiers angefangen mit dem letzten angezeigt. Im Interface befindet sich ein Button um die Daten zu bearbeiten
+    Daten anzeigen öffnet ein neues Interface auf dem verschiedene Daten des ausgewählten Tiers angezeigt werden. Jedes dieser Datensegmente lässt sich auswählen und es wird eine Historik der angelegten Daten dieses Typs angezeigt. Daten sind Gewicht, Name, Nummer[7], Nahrungsmittel, Medizin und Notizen. Unter diesen werden die Bilder[11] des Tiers angefangen mit dem letzten angezeigt. Im Interface befindet sich ein Button um die Daten zu bearbeiten. Mit dem Plus[9] oben rechts im Interface werden neue Fotos für das Tier gemacht.
+    \subsubsection{Neues Foto}
+    Neues Foto[9] öffnet die Kamera und lässt neue Fotos des Tiers machen um das aktuelle Gewicht zu bestimmen. Diese wird automatisch in den Daten des Tieres gespeichert und das aktuelle Gewicht mit Datum aktualisiert.
     \subsubsection{Daten ändern}
     Daten ändern ist ein Unterpunkt von Daten anzeigen mit der Erweiterung, dass mit der Auswahl eines spezifischen Unterpunktes die ausgewählte Spalte manuell geändert werden kann, falls Fehler bei der ersten Eingabe gemacht wurden.
     
 
 \subsection{Benutzerprofile}
+\subsubsection{Online}
+Im Onlinemodus gibt es zwei Benutzerprofile. Der Owner/Admin kann neue User anlegen. Der Owner hat vollen Zugriff auf alle Funktionen während User Zugriffsgenehmigungen auf die verschiedenen Funktionen vom Owner bekommen. 
+\subsubsection{Offline}
+Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen und Rechte der Applikation hat. Hierbei gibt es keine EInschränkungen, er kann innerhalb der Applikation alles Bearbeiten.
 \subsection{Einbettung}
+"Goatimate" benötigt im Onlinemodus
 \subsection{Einschränkungen}
 \section{Anforderungen}
 \subsection{Leistungsanforderungen}
