@@ -123,16 +123,20 @@ Folgende Kenngrößen sind für das System relevant:
     \item Es gibt ca. 40-60 Ziegen mit bereits bestehenden eindeutigen Idenifikatoren.
     \item Durch die bestehende Zucht der Ziegen, kann davon ausgegangen werden, dass jährlich mehrere neue Ziegen gleichzeitig in die Datenbank hinzugefügt werden.
 \end{itemize}
+
+\clearpage
 \section{Benutzeroberfläche}
-\begin{figure}
+\subsection{Vollständige Benutzeroberfläche}
+\begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.245]{UIMockup.pdf}
-    \caption{Übersicht aller Seiten}
+    \includegraphics[scale=0.2]{UIMockup.pdf}
+    \caption{Übersicht aller Pages}
     \label{fig:enter-label}
 \end{figure}
 \clearpage
 
- \begin{figure}
+\subsection{Benutzeroberfläche der einzelnen Pages}
+\begin{figure}[h!]
     \centering
     \includegraphics[scale=1.25]{Sign_in.pdf}
     \caption{Log-In Seite, diese wird beim starten der App angezeigt.}
