@@ -96,7 +96,7 @@ Die Zahlen in den eckigen Klammern [1] im folgenden, beziehen sich auf die Benut
 \subsubsection{Online}
 Im Onlinemodus gibt es zwei Benutzerprofile. Der Owner/Admin kann neue User anlegen. Der Owner hat vollen Zugriff auf alle Funktionen während User Zugriffsgenehmigungen auf die verschiedenen Funktionen vom Owner bekommen. 
 \subsubsection{Offline}
-Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle FUnktionen und Rechte der Applikation hat. Hierbei gibt es keine EInschränkungen, er kann innerhalb der Applikation alles Bearbeiten.
+Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle Funktionen und Rechte der Applikation hat. Hierbei gibt es keine EInschränkungen, er kann innerhalb der Applikation alles Bearbeiten.
 \subsection{Einbettung}
 "Goatimate" benötigt im Onlinemodus eine Schnittstelle zum Server und in allen Modi Zugriff auf die Kamera um Fotos der Tiere zu machen sowie im lokalen Modus Zugriff auf den Speicher des Geräts um die JSON-Files der Tiere zu speichern und zu bearbeiten.
 \subsection{Einschränkungen}
