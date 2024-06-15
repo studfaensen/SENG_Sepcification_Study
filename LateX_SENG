@@ -75,6 +75,7 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 \end{table}
 
 \section{Beschreibung}
+Die Zahlen in den eckigen Klammern [1] im folgenden, beziehen sich auf die Benutzeroberflächen zu finden ab Punkt 4(Figure 2-6).
 \subsection{Grundlegende Funktionen}
     \subsubsection{Log-In Online}
     Log-In Online sorgt für die Verbindung mit einem Server auf dem bereits angelegte Daten vorhanden sind. Dies läuft über die Angabe einer IP-Adresse[1] und danach optionaler Eingabe von Nutzername[2] und Passwort[3], danach kann man mit dem Sign-In Button[4] sich einloggen..
