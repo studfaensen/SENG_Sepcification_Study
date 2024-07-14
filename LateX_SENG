@@ -52,7 +52,8 @@
 \section{Einführung}
 \subsection{Einsatzbereich}
 
-Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden soll, um das Gewicht von Ziegen durch Fotographien zu bestimmen. Hierbei soll die Software für Mobile Endgeräte umgesetzt werden.
+Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden soll, um das Gewicht von Ziegen durch Fotographien zu bestimmen. Hierbei soll die Software für mobile Endgeräte umgesetzt werden.
+Dabei wird sich hauptsächlich an Ziegenzüchtern und Tierärtze als Zielgruppe gehalten.
 
 \subsection{Fachbegriffe und Abkürzungen}
 
@@ -62,42 +63,50 @@ Diese Spezifikation dient als Grundlage für eine Software, die verwendet werden
 		  Begriff & Bedeutung \\ \hline \hline
         UI & Benutzeroberfläche \\ \hline
         JSON & Java Script Object Notation \\ 
-        & Plattformunabhäniges Dateiformat zur einfachen Übertragung \\ \hline
+        & Plattformunabhängiges Dateiformat zur einfachen Übertragung \\ \hline
         Main Screen & erste angezeigte Seite beim Öffnen der App \\ \hline
         App & Mobile Application \\
         & Softwareprogramm für Mobilgeräte \\ \hline
         OS & Betriebssystem \\ \hline
-        Owner & Besitzer der Datenbank \\
-        & Hat jegliche Administoren Rechte \\ \hline
-        User & jegliche anderen Benutzer \\ \hline 
-        Use-Case-Diagramm & hier werden alle Anwendungsmögichkeiten gezeigt \\ \hline
-        Use-Cases & eine übersicht aller Anwendungsmöglichkeiten \\ \hline 
+        Besitzer/Admin & Besitzer der Datenbank \\
+        & Hat jegliche Rechte zur Bearbeitung der Dateien und Datenbank \\ \hline
+        Nutzer & jegliche anderen Benutzer \\ \hline 
+        Use-Case-Diagramm & hier werden alle Anwendungsmöglichkeiten gezeigt \\ \hline
+        Use-Cases & eine Übersicht aller Anwendungsmöglichkeiten \\ \hline 
+        Server & externe Speicherstelle der Datenbank, welche über das Internet erreicht werden kann \\ \hline
+        Log-In & Anmelden an der lokalen oder externen Datenbank \\ \hline
+        IP-Adresse & Internet Protocoll Adresse \\
+        & Eindeutige Identifikation über das Internet \\ \hline
 	\end{tabular}
 \end{table}
 
 \section{Beschreibung}
-Die Zahlen in den eckigen Klammern [1] im folgenden, beziehen sich auf die Benutzeroberflächen zu finden ab Punkt 4(Figure 2-6).
+Die Zahlen in den eckigen Klammern[1] im Folgenden, beziehen sich auf die blau umkreisten Zahlen in den Benutzeroberflächen zu finden ab Punkt 4(Figure 2-6).
 \subsection{Grundlegende Funktionen}
-    \subsubsection{Log-In Online}
-    Log-In Online sorgt für die Verbindung mit einem Server auf dem bereits angelegte Daten vorhanden sind. Dies läuft über die Angabe einer IP-Adresse[1] und danach optionaler Eingabe von Nutzername[2] und Passwort[3], danach kann man mit dem Sign-In Button[4] sich einloggen..
-    \subsubsection{Log-In Local}
-    Log-In Local ruft den lokalen Speicher des Geräts auf. Auf diesem sind die einzelnen Tiere als JSON gespeichert. Hierbei gibt es keine Online Funktion und die Daten können nur Lokal über das Gerät verändert werden. Den lokalen Modus startet man indem man den Dateipfad[1] auf dem Gerät angibt .
+    \subsubsection{Log-In}
+    Für die Anmeldung gibt es zwei Möglichkeiten, welche beide über die selbe Seite(Fig. 2) realisiert werden sollen:
+    \begin{itemize}
+        \item{Log-In Online}
+         sorgt für die Verbindung mit einem Server auf dem bereits angelegte Daten vorhanden sind. Dies läuft über die Angabe einer IP-Adresse[1](Fig. 2) und danach optionaler Eingabe von Nutzername[2](Fig. 2) und Passwort[3](Fig. 2), danach kann man sich mit dem Sign-In Button[4](Fig. 2) einloggen.
+        \item{Log-In Local}
+         ruft den lokalen Speicher des Geräts auf. Hierbei gibt es keine Onlinefunktion und die Daten können nur Lokal über das Gerät verändert werden. Den lokalen Modus startet man indem man den Dateipfad[1](Fig. 2) auf dem Gerät angibt.
+    \end{itemize}
     \subsubsection{Tier hinzufügen}
-    Tier hinzufügen[6] ist ein Button oben rechts im Interface. Hierbei hat der User die Möglichkeit entweder über eine JSON-Datei[14] ein Tier zu importieren oder ein komplett neues Tier anzulegen. Dabei muss ein Name, eine Nummer und Fotos des Tiers gemacht werden und mit diesen Daten wird ein neues Tier in die Datenbank aufgenommen[15].
+    Tier hinzufügen[6](Fig. 3) ist ein Button oben rechts im Interface. Hierbei hat der Nutzer die Möglichkeit entweder über eine JSON-Datei[14](Fig. 5) ein Tier zu importieren oder ein komplett neues Tier anzulegen. Dabei muss ein Name, eine Nummer und Fotos des Tiers gemacht werden und mit diesen Daten wird ein neues Tier in die Datenbank aufgenommen[15](Fig. 5).
     \subsubsection{Dropdown des Tieres}
     Dropdown des Tieres öffnet ein Menu mit verschiedenen Auswahlmöglichkeiten auf das ausgewählte Tier. Die Möglichkeiten sind Neues Foto und Daten anzeigen 
     \subsubsection{Daten anzeigen}
-    Daten anzeigen öffnet ein neues Interface auf dem verschiedene Daten des ausgewählten Tiers angezeigt werden. Jedes dieser Datensegmente lässt sich auswählen und es wird eine Historik der angelegten Daten dieses Typs angezeigt. Daten sind Gewicht, Name, Nummer[7], Nahrungsmittel, Medizin und Notizen. Unter diesen werden die Bilder[11] des Tiers angefangen mit dem letzten angezeigt. Im Interface befindet sich ein Button um die Daten zu bearbeiten. Mit dem Plus[9] oben rechts im Interface werden neue Fotos für das Tier gemacht.
+    Daten anzeigen öffnet ein neues Interface auf dem verschiedenen Daten des ausgewählten Tiers angezeigt werden. Jedes dieser Datensegmente lässt sich auswählen und es wird eine Historik der angelegten Daten dieses Typs angezeigt. Daten sind Gewicht, Name, Nummer[7](Fig. 4), Nahrungsmittel, Medizin und Notizen. Unter diesen werden die Bilder[11](Fig. 4) des Tiers angefangen mit dem letzten angezeigt. Im Interface befindet sich ein Button um die Daten zu bearbeiten. Mit dem Plus[9](Fig. 4) oben rechts im Interface werden neue Fotos für das Tier gemacht.
     \subsubsection{Neues Foto}
-    Neues Foto[9] öffnet die Kamera und lässt neue Fotos des Tiers machen um das aktuelle Gewicht zu bestimmen. Diese wird automatisch in den Daten des Tieres gespeichert und das aktuelle Gewicht mit Datum aktualisiert.
+    Neues Foto[9](Fig. 4) öffnet die Kamera und lässt neue Fotos des Tiers machen um das aktuelle Gewicht zu bestimmen. Aufgrund dieser Gewichtsbestimmung wird eine Empfehlung zum Medikament und zur Dosierung angezeigt. Diese werden automatisch in den Daten des Tieres gespeichert und das aktuelle Gewicht mit Datum aktualisiert. Falls das Foto eine zu schlechte Qualität besitzt, wird darauf hingewiesen und ein neues Foto muss gemacht werden. 
     \subsubsection{Daten ändern}
     Daten ändern ist ein Unterpunkt von Daten anzeigen mit der Erweiterung, dass mit der Auswahl eines spezifischen Unterpunktes die ausgewählte Spalte manuell geändert werden kann, falls Fehler bei der ersten Eingabe gemacht wurden.
     
 \subsection{Benutzerprofile}
 \subsubsection{Online}
-Im Onlinemodus gibt es zwei Benutzerprofile. Der Owner/Admin kann neue User anlegen. Der Owner hat vollen Zugriff auf alle Funktionen während User Zugriffsgenehmigungen auf die verschiedenen Funktionen vom Owner bekommen. 
+Im Onlinemodus gibt es zwei Benutzerprofile. Der Besitzer/Admin kann neue Nutzer anlegen. Der Besitzer hat vollen Zugriff auf alle Funktionen während Nutzer Zugriffsgenehmigungen auf die verschiedenen Funktionen vom Besitzer bekommen. 
 \subsubsection{Offline}
-Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle Funktionen und Rechte der Applikation hat. Hierbei gibt es keine EInschränkungen, er kann innerhalb der Applikation alles Bearbeiten.
+Im Offlinemodus gibt es nur einen lokalen Nutzer der Zugriff auf alle Funktionen und Rechte der Applikation hat. Hierbei gibt es keine Einschränkungen, er kann innerhalb der Applikation alles Bearbeiten.
 \subsection{Einbettung}
 "Goatimate" benötigt im Onlinemodus eine Schnittstelle zum Server und in allen Modi Zugriff auf die Kamera um Fotos der Tiere zu machen sowie im lokalen Modus Zugriff auf den Speicher des Geräts um die JSON-Files der Tiere zu speichern und zu bearbeiten.
 \subsection{Einschränkungen}
@@ -106,13 +115,13 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle Funktionen u
   \item \textbf{Hardware-Kompatibilität:} Die App erfordert eine Mindesthardware-Spezifikation, einschließlich einer funktionierenden Kamera.
   \item \textbf{Betriebssysteme:} "Goatimate" ist nur mit den neuesten Versionen von iOS und Android kompatibel. Ältere Versionen der Betriebssysteme werden nicht unterstützt.
   \item \textbf{Internetverbindung:} Für den Online-Modus ist eine stabile Internetverbindung erforderlich, um Daten mit dem Server synchronisieren zu können.
-  \item \textbf{Speicherplatz:} Ausreichender interner Speicherplatz ist erforderlich, um lokale JSON-Dateien und Fotos der Tiere zu speichern.
+  \item \textbf{Speicherplatz:} Ausreichender interner Speicherplatz ist erforderlich, um lokale JSON-Dateien und Fotos der Tiere zu speichern. Dies wird über das Betriebssystem bereits überprüft und sichergestellt.
 \end{itemize}
 \subsubsection{Software-Einschränkungen}
 \begin{itemize}
   \item \textbf{Bildqualität:} Die Genauigkeit der Gewichtsmessung hängt stark von der Qualität und Klarheit der aufgenommenen Fotos ab. Unscharfe oder schlecht belichtete Bilder können zu ungenauen Ergebnissen führen.
   \item \textbf{JSON-Kompatibilität:} Die App kann nur JSON-Dateien verarbeiten, die einem spezifischen Format entsprechen. Ungültige oder fehlerhaft formatierte Dateien werden nicht erkannt.
-  \item \textbf{Nutzerverwaltung:} Im Online-Modus ist die Nutzerverwaltung durch den Owner/Admin beschränkt. Der Owner/Admin hat die volle Kontrolle über die Nutzerrechte, während normale User nur die ihnen zugewiesenen Rechte ausüben können.
+  \item \textbf{Nutzerverwaltung:} Im Online-Modus ist die Nutzerverwaltung durch den Besitzer/Admin beschränkt. Der Besitzer/Admin hat die volle Kontrolle über die Nutzerrechte, während normale Nutzer nur die ihnen zugewiesenen Rechte ausüben können.
   \item \textbf{Kamera-Zugriff:} Die App benötigt dauerhaften Zugriff auf die Kamera des Geräts. Einschränkungen durch Geräteeinstellungen oder Benutzerberechtigungen können die Funktionalität beeinträchtigen.
 \end{itemize}
 \section{Anforderungen}
@@ -120,8 +129,10 @@ Im Offlinemodus gibt es nur einen lokalen User der Zugriff auf alle Funktionen u
 Folgende Kenngrößen sind für das System relevant:
 \begin{itemize}
     \item Die App kann als Einzelplatzanwendung mit und ebenfalls ohne Netzwerkverbindung arbeiten. Somit wird sie immer von einem einzelnen Anwender bedient, kann aber auf Daten anderer Anwender zugreifen
+    \item Im Falle des Netzwerkbetriebs sollen maximal 5 Admins existieren können.
     \item Da Nutzer selbst hinzugefügt werden können, gibt es keine festgelegte Anzahl. Hierbei ist es relevant die Datenbank für gleichzeitige Zugriffe abzusichern.
-    \item Es gibt ca. 40-60 Ziegen mit bereits bestehenden eindeutigen Idenifikatoren.
+    \item Es gibt ca. 40-60 Ziegen mit bereits bestehenden eindeutigen Identifikatoren.
+    \item Es sollen maximal 300 Ziegen realisiert werden können.
     \item Durch die bestehende Zucht der Ziegen, kann davon ausgegangen werden, dass jährlich mehrere neue Ziegen gleichzeitig in die Datenbank hinzugefügt werden.
 \end{itemize}
 
@@ -131,45 +142,45 @@ Folgende Kenngrößen sind für das System relevant:
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.2]{UIMockup.pdf}
-    \caption{Übersicht aller Pages}
-    \label{fig:enter-label}
+    \caption{Übersicht aller Seiten}
+    \label{fig:UIMockup}
 \end{figure}
 \clearpage
 
-\subsection{Benutzeroberfläche der einzelnen Pages}
+\subsection{Benutzeroberfläche der einzelnen Seiten}
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=1.25]{Sign_in.pdf}
-    \caption{Log-In Seite, diese wird beim starten der App angezeigt.}
-    \label{fig:enter-label}
+    \caption{Log-In Seite, diese wird beim starten der Applikation angezeigt.}
+    \label{fig:Sign_in}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[scale=1.25]{Goats_Overview.pdf}
-    \caption{Diese Seite zeigt eine Übersicht aller Ziegen und wird nach erfolgreichem LogIn angezeigt.}
-    \label{fig:enter-label}
+    \caption{Diese Seite zeigt eine Übersicht aller Ziegen und wird nach erfolgreichem Log-In angezeigt.}
+    \label{fig:Goats_Overview}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[scale=1.25]{Goat_Data.pdf}
     \caption{Nachdem eine Ziege angeklickt wurde, kommt auf eine Übersicht aller gespeicherten Daten zu dieser Ziege.}
-    \label{fig:enter-label}
+    \label{fig:Goat_Data}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[scale=1.25]{Import.pdf}
-    \caption{Hier sieht man das Interface zum anlegen oder importieren einer neuen Ziege, was über die Schaltfläche 6 (Fig. 3) zu erreichen ist.}
-    \label{fig:enter-label}
+    \caption{Hier sieht man die Öberfläche zum Anlegen oder Importieren einer neuen Ziege, was über die Schaltfläche 6 (Fig. 3) zu erreichen ist.}
+    \label{fig:Import}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[scale=1.25]{Export.pdf}
-    \caption{Über die Schaltfläche 8 (Fig. 4) kommt man zum exportien und eventuellen Löschen einer Ziege, was hier gezeigt wird.}
-    \label{fig:enter-label}
+    \caption{Über die Schaltfläche 8 (Fig. 4) kommt man zum Exportieren und eventuellen Löschen einer Ziege, was hier gezeigt wird.}
+    \label{fig:Export}
 \end{figure}
 \clearpage
 
@@ -180,7 +191,7 @@ Folgende Kenngrößen sind für das System relevant:
     \centering
     \includegraphics[scale=0.62]{UseCase.pdf}
     \caption{Use-Case Diagramm zur App: "Goatimate"}
-    \label{fig:enter-label}
+    \label{fig:UseCase}
 \end{figure}
 
 \clearpage
@@ -198,8 +209,8 @@ Folgende Kenngrößen sind für das System relevant:
 		  & N3 & Passwort wiederholen $\rightarrow$ F2 \\ \hline
         & N4 & Rechte des Nutzers festlegen \\ \hline
 		Nachbedingung & & Nutzer ist erstellt \\ \hline
-        Actor & & Owner \\ \hline 
-		Fehler & F1 & Nutzer exisitiert bereits $\rightarrow$ Weiterleitung zur Anmeldung \\ \hline
+        Actor & & Besitzer \\ \hline 
+		Fehler & F1 & Nutzer existiert bereits $\rightarrow$ Weiterleitung zur Anmeldung \\ \hline
 		  & F2 & Passwort nicht nach vorgaben $\rightarrow$ N2 \\ \hline
 		Referenzen & &\\ \hline
 	\end{tabular}
@@ -211,17 +222,17 @@ Folgende Kenngrößen sind für das System relevant:
         ID & & 2 \\ \hline	
         Name & & Datenbank verbinden \\ \hline
 		Vorbedingung & & \\ \hline
-		Normal Ablauf & N1 & IP-Addresse eingeben $\rightarrow$ F1\\ \hline
+		Normal Ablauf & N1 & IP-Adresse eingeben $\rightarrow$ F1\\ \hline
 		  & N2 & Nutzername eingeben $\rightarrow$ F3 \\ \hline
 		  & N3 & Passwort eingeben $\rightarrow$ F4 \\ \hline
         Alternativ & A1 & Lokale Datenbankdatei einlesen $\rightarrow$ F2 \\ \hline
         & A2 & Nutzername eingeben $\rightarrow$ F3 \\ \hline
 		  & A3 & Passwort eingeben $\rightarrow$ F4 \\ \hline
 		Nachbedingung & & Datenbankverbingung ist erstellt\\ \hline
-        Actor & & User, Owner \\ \hline 
+        Actor & & Nutzer, Besitzer \\ \hline 
 		Fehler & F1 & IP-Addresse fehlherhaft $\rightarrow$ N1 \\ \hline
 		  & F2 & Datei kann nicht geöffnet werden $\rightarrow$ N1 \\ \hline
-		  & F3 & Nutzer exisitert nicht $\rightarrow$ N1 \\ \hline
+		  & F3 & Nutzer existiert nicht $\rightarrow$ N1 \\ \hline
 		& F4 & Passwort falsch $\rightarrow$ N1 \\ \hline
 		Referenzen & & \\ \hline
 	\end{tabular}
@@ -240,7 +251,7 @@ Folgende Kenngrößen sind für das System relevant:
         & A2 & Tierdatei importieren \\ \hline
         & A3 & Daten speichern $\rightarrow$ F1 \\ \hline
 		Nachbedingung &  & Tier ist hinzugefügt\\ \hline
-        Actor & & Owner \\ \hline 
+        Actor & & Besitzer \\ \hline 
 		Fehler & F1 & Datenbankverbindung verloren $\rightarrow$ N1 \\ \hline
 		Referenzen & & \\ \hline
 	\end{tabular}
@@ -255,7 +266,7 @@ Folgende Kenngrößen sind für das System relevant:
 		Normal Ablauf & N1 & Nutzername eingeben $\rightarrow$ F1 \\ \hline
 		  & N2 & Passwort eingeben $\rightarrow$ F1 \\ \hline
 		Nachbedingung & & Angemeldet \\ \hline
-        Actor & & User, Owner \\ \hline 
+        Actor & & Nutzer, Besitzer \\ \hline 
 		Fehler & F1 & Anmeldung nicht möglich $\rightarrow$ N1 \\ \hline
 		Referenzen & & \\ \hline
 	\end{tabular}
@@ -268,14 +279,16 @@ Folgende Kenngrößen sind für das System relevant:
 		Name & & Photo machen \\ \hline
 		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
 		Normal Ablauf & N1 & Tier wählen $\rightarrow$ F2 \\ \hline
-		  & N2 & Bild mit der sich öffnenden Kamera machen $\rightarrow$ F3 \\ \hline
-		  & N3 & Bilder nach abfrage überprüfen und bestätigen \\ \hline
-		  & N4 & Bilder abspeichern  $\rightarrow$ F1 \\ \hline
+		  & N2 & Bild mit der sich öffnenden Kamera machen $\rightarrow$ F3 oder $\rightarrow$ F4 \\ \hline
+		  & N3 & Bilder nach Abfrage überprüfen und bestätigen \\ \hline
+        & N4 & Medikamentenempfehlung bestätigen \\ \hline
+		  & N5 & Bilder sowie Medikamentenempfehlung abspeichern $\rightarrow$ F1 \\ \hline
 		Nachbedingung & & \\ \hline
-        Actor & & User, Owner \\ \hline 
+        Actor & & Nutzer, Besitzer \\ \hline 
 		Fehler & F1 & Datenbank verbindung fehlt $\rightarrow$ N1 \\ \hline
 	    & F2 & Tier nicht vorhanden  $\rightarrow$ N2\\ \hline
 		  & F3 & Kameraberechtigung fehlt \\ \hline
+        & F3 & Bildqualität zu schlecht $\rightarrow$ N2 \\ \hline
 		Referenzen & & \\ \hline
 	\end{tabular}
  \end{table}
@@ -291,7 +304,7 @@ Folgende Kenngrößen sind für das System relevant:
 		& N3 & Zu zeigende Daten auswählen \\ \hline
 		& N4 & Daten anzeigen \\ \hline
 		Nachbedingung & &  \\ \hline
-        Actor & & User, Owner \\ \hline 
+        Actor & & Nutzer, Besitzer \\ \hline 
 		Fehler & F1 & Datenbank nicht vorhanden $\rightarrow$ N1 \\ \hline
 		& F2 & Ziege hat keine Daten $\rightarrow$ N6 \\ \hline
 		Referenzen & & \\ \hline
@@ -304,13 +317,12 @@ Folgende Kenngrößen sind für das System relevant:
         ID & & 7 \\ \hline
 		Name & & Daten ändern \\ \hline
 		Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
-		Normal Ablauf & N1 & Tier wählen \\ \hline 
-        & N3 & Daten ändern \\ \hline
+		Normal Ablauf & N1 & Tier wählen $\rightarrow$ F1 \\ \hline 
+        & N2 & Daten ändern \\ \hline
 		& N3 & Nach abfrage bestätigen \\ \hline
 		Nachbedingung & & Daten sind gespeichert \\ \hline
-        Actor & & User, Owner \\ \hline 
-		Fehler & F1 & Datenbank nicht vorhanden $\rightarrow$ N1 \\ \hline
-		& F2 & Ziege hat keine Daten $\rightarrow$ N1 \\ \hline
+        Actor & & Nutzer, Besitzer \\ \hline 
+		Fehler & F1 & Ziege hat keine Daten $\rightarrow$ N1 \\ \hline
 		Referenzen & & \\ \hline
 	\end{tabular}
 \end{table}
@@ -322,14 +334,13 @@ Folgende Kenngrößen sind für das System relevant:
         Name & & Tiere exportieren \\ \hline
         Vorbedingung & & Datenbankverbindung vorhanden \\ \hline
         Normal Ablauf & N1 & Datenformat oder Abfrage zur Löschung auswählen \\ \hline
-        & N2 & Speicherort wählen $\rightarrow$ F2 \\ \hline
+        & N2 & Speicherort wählen $\rightarrow$ F1 \\ \hline
         & N3 & Gewählte Daten und Speicherort bestätigen \\ \hline
         & N4 & Datei abspeichern \\ \hline
         Alternativ Ablauf & A1 & Tier löschen wählen \\ \hline
         & A2 & Tierlöschung bestätigen \\ \hline
-        Actor & & User, Owner \\ \hline 
-        Fehler & F1 & Datenbank nicht vorhanden $\rightarrow$ N1 \\ \hline
-        & F2 & Dateipfad konnte nicht gefunden werden $\rightarrow$ N3 \\ \hline
+        Actor & & Nutzer, Besitzer \\ \hline 
+        Fehler & F2 & Dateipfad konnte nicht gefunden werden $\rightarrow$ N3 \\ \hline
         Referenzen & & \\ \hline
     \end{tabular}
 \end{table}
@@ -338,5 +349,32 @@ Folgende Kenngrößen sind für das System relevant:
 \section{Anhang}
 \subsection{Versionshistorie}
 Die Versionshistorie, sowie jegliche Raw-Version der Dateien und LateX-Code sind unter diesem \href{https://github.com/studfaensen/SENG_Sepcification_Study}{GitHub-Link} zu finden.
+
+\subsection{Review}
+\begin{table}[htp]
+    \begin{tabular}{|p{3.5cm}|p{9cm}|}
+        \hline
+        Befundnummer & Grund \\ \hline \hline
+        1 & Behoben \\ \hline
+        2 & Behoben \\ \hline
+        3 & Behoben \\ \hline
+        4 & Behoben \\ \hline
+        5 & Behoben \\ \hline
+        6 & Behoben \\ \hline
+        7 & Behoben \\ \hline
+        8 & Bei fehlendem Speicherplatz wird eine Fehlermeldung des Betriebssystems ausgelöst und muss somit nicht weiter spezifiziert werden. \\ \hline
+        9 & Gut \\ \hline
+        10 & Behoben \\ \hline
+        11 & Gut \\ \hline
+        12 & Zeitraum ist abhängig von der Updatefrequenz der Implementierung und somit von den Entwicklern zu entscheiden \\ \hline
+        13 & Das Dateiformat wird den Entwicklern frei überlassen, je nachdem welches sich am besten zum Abspeichern eignet. \\ \hline
+        14 & Gut \\ \hline
+        15 & Behoben \\ \hline
+        16 & Zuordnung existiert bereits durch die Bildcaptions \\ \hline
+        17 & Behoben \\ \hline
+        18 & siehe Befund Nr.8 \\ \hline
+        19 & Behoben \\ \hline
+    \end{tabular}
+\end{table}
 
 \end{document} 
